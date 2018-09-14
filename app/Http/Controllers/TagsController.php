@@ -10,9 +10,9 @@ class TagsController extends Controller
 {
     public function index(Tag $tag = null)
     {    
-        if (!is_null($tag)) {
-            return $tag;
+        if (is_null($tag)) {
+            return Tag::all();
         }
-        return Tag::all();
+        return $tag->posts;
     }
 }
