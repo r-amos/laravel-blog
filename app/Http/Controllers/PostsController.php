@@ -10,7 +10,7 @@ class PostsController extends Controller
 {
     public function index()
     {
-        return Post::all();
+        return Post::simplePaginate(5);
     }
 
     public function show(Post $post)

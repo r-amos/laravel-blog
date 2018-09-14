@@ -8,8 +8,11 @@ use App\Tag;
 
 class TagsController extends Controller
 {
-    public function index(Tag $tag)
-    {
-        return $tag->posts;
+    public function index(Tag $tag = null)
+    {    
+        if (!is_null($tag)) {
+            return $tag;
+        }
+        return Tag::all();
     }
 }
