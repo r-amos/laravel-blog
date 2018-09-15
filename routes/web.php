@@ -13,9 +13,9 @@
 
 Route::get('/', function()
 {
-    return "Hello World";
-});
-Route::get('/posts', 'PostsController@index')->name('index');
+    return view('pages.home');
+})->name('home');
+Route::get('/posts', 'PostsController@index')->name('posts');
 Route::get('/posts/{post}', 'PostsController@show');
 Route::get('/tags', 'TagsController@index');
 Route::get('/posts/tags/{tag}', 'TagsController@index');
