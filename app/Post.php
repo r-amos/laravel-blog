@@ -48,6 +48,13 @@ class Post extends Model
         return self::SLUG_FIELD;
     }
 
+    public function convertMarkdownContent()
+    {
+        $this->content = (new \Parsedown())
+            ->setMarkupEscaped(true)
+            ->text($this->content);
+    }
+
     public function getRouteKeyName()
     {
         return 'slug';

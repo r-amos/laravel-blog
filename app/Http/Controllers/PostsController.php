@@ -31,6 +31,7 @@ class PostsController extends Controller
 
     public function show(Post $post)
     {
+        $post->convertMarkdownContent();
         return view('pages.post', compact('post'));
     }
 
@@ -53,4 +54,5 @@ class PostsController extends Controller
     {
         return (self::PAGE_LIMIT * $currentPage) - self::PAGE_LIMIT;
     }
+
 }
