@@ -12,6 +12,12 @@ class Post extends Model
 
     const SLUG_FIELD = 'title';
 
+    protected $fillable = [
+        'title',
+        'content',
+        'user_id'
+    ];   
+
     public function tags()
     {
         return $this->belongsToMany('App\Tag');

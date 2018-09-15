@@ -8,7 +8,8 @@ use App\Post;
 
 class PostsController extends Controller
 {
-    const PAGE_LIMIT = 5;   
+    const PAGE_LIMIT = 5;
+
     public function index()
     {           
        $paginationStart = $this->getPaginationStart(Paginator::resolveCurrentPage());
@@ -31,6 +32,21 @@ class PostsController extends Controller
     public function show(Post $post)
     {
         return $post;
+    }
+
+    public function create()
+    {
+        return view('pages.create-post');
+    }
+
+    public function store(Request $request)
+    {
+        Post::create([
+            'title' => $request['title'],
+            'content' => $request['content'],
+            'user_id' => 1
+        ]);
+        return redirect('/posts');
     }
 
     private function getPaginationStart($currentPage)
