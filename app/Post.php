@@ -4,9 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
-
+use App\Traits\Sluggable;
 class Post extends Model
 {
+    
+    use Sluggable;
+
+    const SLUG_FIELD = 'title';
+
     public function tags()
     {
         return $this->belongsToMany('App\Tag');
@@ -31,4 +36,15 @@ class Post extends Model
         }
         return $query;
     }
+    
+    public function sluggable()
+    {
+        return self::SLUG_FIELD;
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
 }
