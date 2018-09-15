@@ -10,11 +10,10 @@ trait Sluggable {
     {
         static::saving(function($model) {
             $sluggableField = $model->sluggable();
-            $slug = $model->generateSlug(
-                $model[$sluggableField]
-            );
+            $originalValue = $model[$sluggableField];
+            $slug = $model->generateSlug($originalValue);
             $noOfInstances = $model
-                ->getNoOfInstances($model[$sluggableField]);
+                ->getNoOfInstances($originalValue);
             if ($noOfInstances > 0) {
                 $noOfInstances++;
                 $slug = "{$slug}-{$noOfInstances}";

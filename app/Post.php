@@ -5,12 +5,18 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 use App\Traits\Sluggable;
+use App\Traits\Paginatable;
+
 class Post extends Model
 {
     
     use Sluggable;
+    use Paginatable {
+        getPageItems as getPaginatedPostItems;
+    }
 
     const SLUG_FIELD = 'title';
+    const PAGE_LIMIT = 5;
 
     protected $fillable = [
         'title',
@@ -58,6 +64,10 @@ class Post extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    public static function getPageItems($items) {
+        return self::getPaginatedPostItems($items)->withPath('posts');
     }
 
 }
