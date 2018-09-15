@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Traits;
-
+use Illuminate\Support\Facades\DB;
 trait Sluggable {
 
     abstract public function sluggable(): string;
@@ -10,8 +10,24 @@ trait Sluggable {
     {
         static::saving(function($model) {
             $sluggableField = $model->sluggable();
-            $model->slug = $model->generateSlug($model[$sluggableField]);
+            $slug = $model->generateSlug(
+                $model[$sluggableField]
+            );
+            $noOfInstances = $model
+                ->getNoOfInstances($slug);
+            if ($noOfInstances > 0) {
+                $noOfInstances++;
+                $slug = "{$slug}-{$noOfInstances}";
+            } 
+            $model->slug = $slug;
         });
+    }
+
+    public function getNoOfInstances($slug)
+    {
+        return DB::table($this->getTable())
+            ->where($this->sluggable(), $slug)
+            ->count();
     }
 
     public function generateSlug($string)
