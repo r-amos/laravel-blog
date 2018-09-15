@@ -14,7 +14,7 @@ trait Sluggable {
                 $model[$sluggableField]
             );
             $noOfInstances = $model
-                ->getNoOfInstances($slug);
+                ->getNoOfInstances($model[$sluggableField]);
             if ($noOfInstances > 0) {
                 $noOfInstances++;
                 $slug = "{$slug}-{$noOfInstances}";
@@ -24,7 +24,7 @@ trait Sluggable {
     }
 
     public function getNoOfInstances($slug)
-    {
+    { 
         return DB::table($this->getTable())
             ->where($this->sluggable(), $slug)
             ->count();
