@@ -21,3 +21,5 @@ Route::get('/posts/create', 'PostsController@create');
 Route::get('/posts/{post}', 'PostsController@show');
 Route::get('/tags', 'TagsController@index');
 Route::get('/posts/tags/{tag}', 'TagsController@index');
+Auth::routes();
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );

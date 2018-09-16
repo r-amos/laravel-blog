@@ -6,14 +6,19 @@
         @csrf
         <div>
             <label for="title">Title:</label>
-            <input name="title" type="text" />
+            <input id="title" name="blog-title" type="text" />
         </div>
         <div>
-            <label for="title">Content:</label> 
-            <input name="content" type="text" />
+            <label for="description">Description:</label>
+            <input id="description" name="blog-description" type="text" />
         </div>
         <div>
-            <button type="submit" />
+            <label for="content">Content:</label> 
+            <textarea id="content" name="blog-content" type="text">
+            </textarea>
+        </div>
+        <div>
+            <button type="submit">Save Post</button>
         </div>
     </form>
 @endsection

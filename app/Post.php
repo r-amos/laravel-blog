@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+
 use Carbon\Carbon;
 use App\Traits\Sluggable;
 use App\Traits\Paginatable;
@@ -20,14 +21,16 @@ class Post extends Model
 
     protected $fillable = [
         'title',
+        'description',
         'content',
         'user_id'
-    ];   
-
+    ];
+    
     public function tags()
     {
         return $this->belongsToMany('App\Tag');
     }
+
     public function scopeFilters($query, $filters)
     {   
         if ($filters) {

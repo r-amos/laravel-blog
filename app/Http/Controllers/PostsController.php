@@ -11,6 +11,12 @@ class PostsController extends Controller
 
     const PAGE_LIMIT = 5;
 
+    public function __construct()
+    {
+        $this->middleware('auth')
+            ->only('create', 'store');
+    }
+
     public function index()
     {                  
         return view(
@@ -38,11 +44,12 @@ class PostsController extends Controller
     }
 
     public function store(Request $request)
-    {
+    {        
         Post::create([
-            'title' => $request['title'],
-            'content' => $request['content'],
-            'user_id' => 1
+            'title' => $request['blog-title'],
+            'description' => $request['blog-description'],
+            'content' => $request['blog-content'],
+            'user_id' => auth()->id()
         ]);
         return redirect('/posts');
     }
