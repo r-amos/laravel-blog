@@ -1,5 +1,7 @@
 @extends('templates.layout')
-
 @section('content')
-<h1>Some Stuff</h1>
+    <div class="heading heading__container">
+        <h1><span class="heading--break">Robert</span> Amos.</h1>
+        <h3>Dreamweaver. Visionary. Idiot.</h3>
+    </div>
 @endsection

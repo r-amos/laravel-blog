@@ -23,7 +23,8 @@ class PostsController extends Controller
             'pages.posts',
             [
                 'posts' => Post::getPageItems(
-                    Post::latest()
+                    Post::with('tags')
+                        ->latest()
                         ->filters(request(['month', 'year']))
                         ->get()
                         ->toArray()

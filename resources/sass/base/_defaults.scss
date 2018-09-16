@@ -1,0 +1,15 @@
+/**
+* Set Box Model On Root Element
+*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  /**
+  * Inherit To Preserve Child Inheritance
+  */
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }

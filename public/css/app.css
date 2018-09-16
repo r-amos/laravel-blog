@@ -1,0 +1,162 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/**
+* Set Box Model On Root Element
+*/
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/**
+  * Inherit To Preserve Child Inheritance
+  */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  max-width: 590px;
+  margin: 4rem auto;
+}
+
+.heading {
+  margin: 0 auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.heading__container {
+  max-width: 590px;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+}
+
+.heading--break {
+  display: block;
+}
+
+nav {
+  background-color: black;
+}
+
+nav .navigation__container {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav .navigation__item {
+  list-style: none;
+  padding: 1rem 2rem 1rem 0rem;
+}
+
+nav .navigation__item > a {
+  color: white;
+  text-decoration: none;
+}
+
+nav .navigation__item > a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.posts__container {
+  max-width: 590px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.posts__container > h4 {
+  padding-bottom: 0.5rem;
+}
+
+.posts__container > h4 + div {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+.posts__container * a {
+  text-decoration: none;
+  color: black;
+}
+
+.posts__container * a:visited {
+  color: black;
+}
+
+.posts__container p {
+  padding-top: 1.2rem;
+}
+
+.content {
+  max-width: 590px;
+  margin: 0 auto;
+}
+
+p {
+  padding: 0 0 2rem 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 8rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+.nav-link {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+

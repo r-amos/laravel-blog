@@ -1,7 +1,10 @@
 @extends('templates.layout')
 @section('content')
-
-<h1>{{$post->title}}</h1>
-<p>{!! $post->content !!}</h1>
+    <div class="title">
+        <h3>{{$post->title}}</h3>
+    </div>
+    <div class="content">
+        {!! $post->content !!}
+    </div>
 
 @endsection

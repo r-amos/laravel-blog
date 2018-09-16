@@ -1,9 +1,22 @@
 @extends('templates.layout')
 
 @section('content')
-    <h1>Some Stuff</h1>
+    <div class="title">
+        <h2>Ramblings.</h2>
+    </div>
     @foreach($posts as $post)
-    <h3>{{ $post['title'] }}</h3>
+        <div class="posts posts__container">
+            <h4>
+                <a href="/posts/{{ $post['slug'] }}">{{ $post['title'] }}</a>
+            </h4>
+            <div>{{$post['created_at']}}</div>
+            <div>
+                @foreach($post['tags'] as $tag)
+                    <span>{{ $tag['name'] }}</span>
+                @endforeach
+            </div>
+            <p>{{ $post['description'] }}</p>
+        </div>
     @endforeach
     {{ $posts->links('components.pagination', ['paginator' => $posts]) }}
 @endsection
