@@ -1,10 +1,15 @@
 @extends('templates.layout')
 @section('content')
     <div class="title">
-        <h3>{{$post->title}}</h3>
+        <h1>{{$post->title}}</h2>
+         <div class="sub-heading">
+            {{$post->formattedDate()}}
+         </div>
     </div>
     <div class="content">
+        <p class="summary">
+            {{ $post->description }}
+        </p>
         {!! $post->content !!}
     </div>
-
 @endsection

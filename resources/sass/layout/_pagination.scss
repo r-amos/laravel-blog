@@ -1,0 +1,21 @@
+.pagination {
+    margin: 3rem 0rem;
+
+    &__container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    &__link {
+        padding: 0 1rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #444444;
+        text-decoration: none;
+        &:visited {
+            text-decoration: none;
+        }
+
+    }
+}
