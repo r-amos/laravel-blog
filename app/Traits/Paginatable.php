@@ -13,7 +13,10 @@ trait Paginatable {
             $paginationStart,
             self::PAGE_LIMIT
         );
-        return (new Paginator($pageItems, self::PAGE_LIMIT))
+        $models = array_map(function($element){
+            return new self($element);
+        }, $pageItems);
+        return (new Paginator($models, self::PAGE_LIMIT))
             ->hasMorePagesWhen($paginationStart < count($items) - self::PAGE_LIMIT);
     }
 

@@ -1,20 +1,28 @@
 .posts {
     &__container {
+
+    }
+
+    &__post {
         max-width: $content-width;
         margin: 0 auto;
         margin-bottom: 3rem;
-        > h4 {
-            padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(black, 0.2);
+        > h2 {
+            margin-bottom: 1.5rem;
         }
-        >  h4 + div {
-           padding-top: 1.2rem;
-           padding-bottom: 1.2rem;
+        .sub-heading {
+            margin-bottom: 1.5rem;
+        }
+        > h4 {
+            margin-top: 1.4rem;
+            padding-bottom: 0.5rem;
         }
         * a {
             text-decoration: none;
-            color: black;
+            color: #444444;;
             &:visited {
-                color: black;
+                color:#444444;;
             }
         }
         p {

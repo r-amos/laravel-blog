@@ -4,6 +4,9 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   /**
   * Inherit To Preserve Child Inheritance

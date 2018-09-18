@@ -23,7 +23,10 @@ class Post extends Model
         'title',
         'description',
         'content',
-        'user_id'
+        'user_id',
+        'tags',
+        'slug',
+        'created_at'
     ];
     
     public function tags()
@@ -71,6 +74,11 @@ class Post extends Model
 
     public static function getPageItems($items) {
         return self::getPaginatedPostItems($items)->withPath('posts');
+    }
+
+    public function formattedDate()
+    {
+        return $this->created_at->format('F jS, Y');
     }
 
 }
