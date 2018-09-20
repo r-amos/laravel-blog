@@ -6,4 +6,3 @@
         <a class="pagination__link" href={{ $paginator->nextPageUrl() }}>Next Page</a>
     @endif
 </div>
-

@@ -1,0 +1,12 @@
+.flex-container {
+    display: flex;
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+@for $width from 1 to 13 {
+  .col-#{$width} {
+    margin: 0 1.5rem;
+    flex-basis: percentage($width/12);
+  }
+}

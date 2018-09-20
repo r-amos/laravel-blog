@@ -7,10 +7,12 @@
 
 @import "components/title";
 
+@import "layout/grid";
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/pagination";
 @import "layout/posts";
+@import "layout/sidebar";
 
 @import "pages/post";
 

@@ -16,7 +16,13 @@ class TagsController extends Controller
         }
         return view(
             'pages.posts', 
-            ['posts' => Post::getPageItems($tag->posts->toArray())]
+            [
+                'posts' => Post::getPageItems($tag->posts->toArray()),
+
+                'tag' => $tag->name
+                
+            ]
         );
     }
+
 }
