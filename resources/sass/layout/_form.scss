@@ -1,0 +1,38 @@
+form {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgba(#444444, 0.9);
+
+    * {
+        font-family: 'Asap', sans-serif;
+        font-size: 1.6rem;
+        color: rgba(#444444, 0.9);
+    }
+    * input, select {
+        height: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: block;
+        width: 50%;
+        border: 1px solid rgba(#444444, 0.8);
+        border-radius: 3px;
+    }
+    * textarea {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: block;
+        width: 100%;
+        height: 20rem;
+        border-radius: 3px;
+    }
+    * button {
+        margin-top: 1.6rem;
+        letter-spacing: 0.5px;
+        padding: 1rem 2.75rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: white;
+        background-color: rgba(#444444, 0.9);
+        border-radius: 4px;
+    }
+}

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use App\Post;
-
+use App\Tag;
 class PostsController extends Controller
 {
 
@@ -41,20 +41,22 @@ class PostsController extends Controller
 
     public function create()
     {
-        return view('pages.create-post');
+        return view('pages.create-post', [
+            'tags' => \App\Tag::all()->pluck(['name'])
+        ]);
     }
 
     public function store(Request $request)
-    {        
-        Post::create([
+    {                
+        (Post::create([
             'title' => $request['blog-title'],
             'description' => $request['blog-description'],
             'content' => $request['blog-content'],
             'user_id' => auth()->id()
-        ]);
+        ]))
+            ->createTagsRelationship($request['blog-topic']);
         return redirect('/posts');
     }
-
     private function getPaginationStart($currentPage)
     {
         return (self::PAGE_LIMIT * $currentPage) - self::PAGE_LIMIT;

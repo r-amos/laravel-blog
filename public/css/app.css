@@ -42,9 +42,58 @@ body {
   padding: 0;
 }
 
+code {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
 .title {
   max-width: 590px;
   margin: 0 auto 5rem auto;
+}
+
+form {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgba(68, 68, 68, 0.9);
+}
+
+form * {
+  font-family: 'Asap', sans-serif;
+  font-size: 1.6rem;
+  color: rgba(68, 68, 68, 0.9);
+}
+
+form * input,
+form select {
+  height: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: block;
+  width: 50%;
+  border: 1px solid rgba(68, 68, 68, 0.8);
+  border-radius: 3px;
+}
+
+form * textarea {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: block;
+  width: 100%;
+  height: 20rem;
+  border-radius: 3px;
+}
+
+form * button {
+  margin-top: 1.6rem;
+  letter-spacing: 0.5px;
+  padding: 1rem 2.75rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  background-color: rgba(68, 68, 68, 0.9);
+  border-radius: 4px;
 }
 
 footer {
@@ -293,6 +342,78 @@ p {
   padding: 0 0 2rem 0;
 }
 
+/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #272822;
+  color: #ddd;
+}
+
+.hljs-tag,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-strong,
+.hljs-name {
+  color: #f92672;
+}
+
+.hljs-code {
+  color: #66d9ef;
+}
+
+.hljs-class .hljs-title {
+  color: white;
+}
+
+.hljs-attribute,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-link {
+  color: #bf79db;
+}
+
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-section,
+.hljs-emphasis,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #a6e22e;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-selector-id {
+  font-weight: bold;
+}
+
 body {
   font-family: 'Asap', sans-serif;
 }
@@ -343,5 +464,10 @@ p {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+code {
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 

@@ -16,5 +16,7 @@
                 </div>
             </div>
             @include('layouts.footer')
+            <script src="{{ asset('js/app.js') }}"></script>
+            <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </body>
 </html>
