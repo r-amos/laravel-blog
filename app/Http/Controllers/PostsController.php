@@ -84,6 +84,12 @@ class PostsController extends Controller
 
     }
 
+    public function destroy(Post $post)
+    {
+        $post->delete();
+        return redirect("/posts");
+    }
+
     private function getPaginationStart($currentPage)
     {
         return (self::PAGE_LIMIT * $currentPage) - self::PAGE_LIMIT;

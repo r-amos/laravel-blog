@@ -22,6 +22,7 @@ Route::get('/posts/create', 'PostsController@create');
 Route::get('/posts/{post}', 'PostsController@show');
 Route::get('/posts/{post}/edit', 'PostsController@edit');
 Route::put('/posts/{post}/update', 'PostsController@update');
+Route::delete('/posts/{post}', 'PostsController@destroy');
 
 Route::get('/tags', 'TagsController@index');
 Route::get('/posts/tags/{tag}', 'TagsController@index');
