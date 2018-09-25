@@ -57,9 +57,35 @@ class PostsController extends Controller
             ->createTagsRelationship($request['blog-topic']);
         return redirect('/posts');
     }
+
+    public function edit(Post $post)
+    {
+        return view('pages.edit-post', [
+            'post' => $post,
+            'tags' => \App\Tag::all()->pluck(['name'])
+        ]);
+    }
+
+    public function update(Post $post, Request $request)
+    {   
+
+        // Update Post With Request Data.
+        $post->title = $request['blog-title'];
+        $post->description = $request['blog-description'];
+        $post->content = $request['blog-content'];
+        $post->save();
+        
+        // Update Tags Relationship
+        $post->updateTagsRelationship($request['blog-topic']);
+
+        // Redirect
+        $slug = $post->slug;
+        return redirect("/posts/{$slug}");
+
+    }
+
     private function getPaginationStart($currentPage)
     {
         return (self::PAGE_LIMIT * $currentPage) - self::PAGE_LIMIT;
     }
-
 }

@@ -7,8 +7,12 @@
     @foreach($posts as $post)
             <div class="posts__post">
                 <h2>
-                    <a href="/posts/{{ $post['slug'] }}">{{ $post['title'] }}</a>
+                    <a href="/posts/{{ urlencode($post['slug']) }}">{{ $post['title'] }}</a>
                 </h2>
+                @if(Auth::user() !== null)
+                    <a href="/posts/{{ urlencode($post['slug']) }}/edit">Edit</a>
+                    <a href="">Delete</a>
+                @endif
                 <div class="sub-heading">
                     {{$post->formattedDate()}}
                 </div>

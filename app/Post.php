@@ -86,4 +86,10 @@ class Post extends Model
             Tag::getIdFromName($tag)
         );
     }
+    public function updateTagsRelationship($tag)
+    {
+        $this->tags()->sync(
+            Tag::getIdFromName($tag)
+        );
+    }
 }
