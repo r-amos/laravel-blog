@@ -1,0 +1,24 @@
+.button {
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    margin: 1rem 1rem 1rem 0;
+    display: inline-block;
+    &--edit {
+        background-color: green;
+        color: white !important;
+        text-decoration: none;
+        &:visited {
+            color: white !important;
+        }
+    }
+    &--delete {
+        background-color: red;
+        color: white !important;
+        text-decoration: none;
+        &:visited {
+            color: white !important;
+        }
+    }
+}

@@ -42,6 +42,35 @@ body {
   padding: 0;
 }
 
+.button {
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  margin: 1rem 1rem 1rem 0;
+  display: inline-block;
+}
+
+.button--edit {
+  background-color: green;
+  color: white !important;
+  text-decoration: none;
+}
+
+.button--edit:visited {
+  color: white !important;
+}
+
+.button--delete {
+  background-color: red;
+  color: white !important;
+  text-decoration: none;
+}
+
+.button--delete:visited {
+  color: white !important;
+}
+
 code {
   background-color: rgba(0, 0, 0, 0.7) !important;
   border-radius: 2px;

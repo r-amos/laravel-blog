@@ -5,6 +5,7 @@
          <div class="sub-heading">
             {{$post->formattedDate()}}
          </div>
+         @include('components.edit')
     </div>
     <div class="content">
         <p class="summary">
