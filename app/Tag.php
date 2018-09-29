@@ -8,7 +8,7 @@ class Tag extends Model
 {
     public function posts()
     {
-        return $this->belongsToMany('App\Post')->orderBy('created_at', 'desc');
+        return $this->belongsToMany('App\Post')->with('tags')->orderBy('created_at', 'desc');
     }
     public function getRouteKeyName()
     {

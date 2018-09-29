@@ -5,12 +5,14 @@
          <div class="sub-heading">
             {{$post->formattedDate()}}
          </div>
-         @include('components.edit')
+         @include('components.topics')
     </div>
     <div class="content">
         <p class="summary">
             {{ $post->description }}
         </p>
         {!! $post->content !!}
+        @include('components.edit')
     </div>
+
 @endsection

@@ -1,5 +1,24 @@
 footer {
     background-color: rgba(black, 0.8);
-    height: 4rem;
+    height: 6rem;
     flex-shrink: 0;
+    > ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        > li {
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-right: 5rem;
+            a {
+                color: rgba($white, 0.8);
+                text-decoration: none;
+            }
+            a:visited{
+                color: rgba($white, 0.8);
+            }
+        }
+    }
 }

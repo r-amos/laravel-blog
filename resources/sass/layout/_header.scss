@@ -11,10 +11,10 @@
         > a {
             font-size: 2.4rem;
             font-weight: 700;
-            color: white;
+            color: $white;
             text-decoration: none;
             &:visited {
-                color: white;
+                color: $white;
             }
         }
     }

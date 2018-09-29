@@ -33,7 +33,7 @@ class Post extends Model
     {
         return $this->belongsToMany('App\Tag');
     }
-
+    
     public function scopeFilters($query, $filters)
     {   
         if ($filters) {

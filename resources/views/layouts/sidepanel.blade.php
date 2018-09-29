@@ -3,7 +3,11 @@
     <nav class="sidebar-navigation">
         <ul>
             @foreach($tags as $tag)
-            <li><a href="/posts/tags/{{ $tag }}">{{ $tag }}</a></li>
+            <li>
+                <div class="sidebar-topic__container">
+                    <a href="/posts/tags/{{ $tag }}">{{ $tag }}</a>
+                </div>
+            </li>
             @endforeach
         </ul>
     </nav>

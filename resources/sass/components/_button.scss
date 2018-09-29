@@ -2,23 +2,28 @@
     font-size: 1.6rem;
     font-weight: 700;
     border-radius: 5px;
-    padding: 0.5rem 2rem;
     margin: 1rem 1rem 1rem 0;
-    display: inline-block;
+    display: flex;
     &--edit {
         background-color: green;
-        color: white !important;
+        color: $white !important;
         text-decoration: none;
+        display: inline-block;
+        padding: 0.5rem 2rem;
         &:visited {
-            color: white !important;
+            color: $white !important;
         }
     }
     &--delete {
         background-color: red;
-        color: white !important;
+        color: $white !important;
         text-decoration: none;
+        display: inline-block;
+        padding: 1rem 2rem;
+        border: none;
+        cursor: pointer;
         &:visited {
-            color: white !important;
+            color: $white !important;
         }
     }
 }

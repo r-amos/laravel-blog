@@ -1,0 +1,21 @@
+.topic {
+    &__container {
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        > a {
+            text-decoration: none;
+            &:visited {
+                text-decoration: none;
+            }
+        }
+    }
+    border-radius: 5px;
+    background-color: rgba(#1abc9c, 0.8);
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 1rem 1rem 0rem 0rem;
+    color: rgba($white, 0.9) !important;
+}

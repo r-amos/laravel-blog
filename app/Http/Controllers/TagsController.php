@@ -18,11 +18,8 @@ class TagsController extends Controller
             'pages.posts', 
             [
                 'posts' => Post::getPageItems($tag->posts->toArray()),
-
                 'tag' => $tag->name
-                
             ]
         );
     }
-
 }

@@ -1,5 +1,5 @@
 @if(Auth::user() !== null)
-<div>
+<div class="button">
     <a class="button button--edit" href="/posts/{{ urlencode($post['slug']) }}/edit">Edit</a>
     <form action="/posts/{{ $post->slug }}" method="POST">
         @csrf

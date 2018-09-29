@@ -12,11 +12,7 @@
                 <div class="sub-heading">
                     {{$post->formattedDate()}}
                 </div>
-                <div>
-                    @foreach($post['tags'] as $tag)
-                        <span>{{ $tag['name'] }}</span>
-                    @endforeach
-                </div>
+                @include('components.topics')
                 <p>{{ $post['description'] }}</p>
                 @include('components.edit')
             </div>
