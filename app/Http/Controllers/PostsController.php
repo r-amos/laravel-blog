@@ -6,18 +6,45 @@ use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use App\Post;
 use App\Tag;
+
+/**
+ * PostsController class responsible for handling requests
+ * for Post Models. 
+ * 
+ * PostsController class contains the logic responsible for handling
+ * create, read, update and delete requests in relation to a Post or
+ * collection of Posts. 
+ */
 class PostsController extends Controller
 {
 
     const PAGE_LIMIT = 5;
 
+    /**
+     * Constructs PostController instance
+     * 
+     * Contstructor function is responsible for creating and returning a PostsController instance
+     * along with assigning the authentication middleware to the 'create' and 'store' actions.
+     * 
+     * @return void
+     */
     public function __construct()
     {
         $this->middleware('auth')
             ->only('create', 'store');
     }
 
-    public function index()
+    /**
+     * Return Posts View with Pagination Posts Data
+     * 
+     * Gets a collection of Posts, with Tags relationship populated, ordered by the latest
+     * with an optional filter of the month and / or of interest applied. The collection
+     * is converted to an array, and passed to Post::getPageItems, the result
+     * of which is passed to as the data to the 'pages.posts' view.
+     *
+     * @return Illuminate\View\View
+     */
+    public function index(): Illuminate\View\View
     {                  
         return view(
             'pages.posts',
@@ -33,7 +60,16 @@ class PostsController extends Controller
         );
     }
 
-    public function show(Post $post)
+    /**
+     * Returns post view
+     *
+     * For a specific Post provided, calls Post->convertMarkdownContent
+     * and passes as data to the 'pages.post' view.
+     * 
+     * @param Post $post
+     * @return Illuminate\View\View
+     */
+    public function show(Post $post): Illuminate\View\View
     {
         $post->convertMarkdownContent();
         return view('pages.post', compact('post'));
