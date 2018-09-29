@@ -16,6 +16,7 @@ form {
         width: 50%;
         border: 1px solid rgba(#444444, 0.8);
         border-radius: 3px;
+        background-color: rgba(white, 0.5);
     }
     * textarea {
         margin-top: 2rem;
@@ -24,6 +25,7 @@ form {
         width: 100%;
         height: 20rem;
         border-radius: 3px;
+        background-color: rgba(white, 0.5);
     }
     * button {
         margin-top: 1.6rem;
@@ -34,5 +36,6 @@ form {
         color: $white;
         background-color: rgba(#444444, 0.9);
         border-radius: 4px;
+        cursor: pointer;
     }
 }

@@ -1,11 +1,12 @@
 @extends('templates.layout')
 @section('content')
     <div class="title">
-        <h1>Contact me!</h1>
-        <div class="sub-heading">Please use the form below if you would like to get in contact with me.</div>
+        <h1>Contact.</h1>
+        <!--<div class="sub-heading">Please use the form below if you would like to get in contact with me.</div>-->
     </div>
     <div class="content">
-        <form>
+        <p>If you would like to get in contact, please email me: moose@amoose.website.
+        <!--<form>
             <div>
                 <label for="contact-name">Name</label>
                 <input id="contact-name" />
@@ -20,6 +21,6 @@
             <div>
                 <button type="submit">Send!</button>
             </div>
-        </form>
+        </form>-->
     </div>
 @endsection
