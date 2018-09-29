@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
+
 use App\Post;
 use App\Tag;
 
@@ -42,9 +43,9 @@ class PostsController extends Controller
      * is converted to an array, and passed to Post::getPageItems, the result
      * of which is passed to as the data to the 'pages.posts' view.
      *
-     * @return Illuminate\View\View
+     * @return \Illuminate\View\View
      */
-    public function index(): Illuminate\View\View
+    public function index(): \Illuminate\View\View
     {                  
         return view(
             'pages.posts',
@@ -67,15 +68,15 @@ class PostsController extends Controller
      * and passes as data to the 'pages.post' view.
      * 
      * @param Post $post
-     * @return Illuminate\View\View
+     * @return \Illuminate\View\View
      */
-    public function show(Post $post): Illuminate\View\View
+    public function show(Post $post): \Illuminate\View\View
     {
         $post->convertMarkdownContent();
         return view('pages.post', compact('post'));
     }
 
-    public function create()
+    public function create(): \Illuminate\View\View
     {
         return view('pages.create-post', [
             'tags' => \App\Tag::all()->pluck(['name'])
@@ -94,7 +95,7 @@ class PostsController extends Controller
         return redirect('/posts');
     }
 
-    public function edit(Post $post)
+    public function edit(Post $post): \Illuminate\View\View
     {
         return view('pages.edit-post', [
             'post' => $post,

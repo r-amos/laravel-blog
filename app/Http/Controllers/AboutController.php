@@ -14,9 +14,9 @@ class AboutController extends Controller
     /**
      * Return about view.
      *
-     * @return Illuminate\View\View
+     * @return \Illuminate\View\View
      */
-    public function index()
+    public function index(): \Illuminate\View\View
     {
         return view('pages.about');
     }
