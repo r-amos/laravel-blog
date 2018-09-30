@@ -3,9 +3,9 @@
         <div class="container">
             @include('layouts.header')
             <div class="title">
-                <h1>{{ __('Login') }}</h1>.
+                <h1>{{ __('Login') }}</h1>
             </div>
-            <div class="content">
+            <div class="login-content">
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                         <div>

@@ -474,6 +474,21 @@ form * button {
 * Apply standard content styling
 */
 
+.login-content {
+  max-width: 590px;
+  margin: 0 auto 3rem auto;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/**
+    For a given range of headings, iterate and apply styling
+*/
+
+/**
+* Apply standard content styling
+*/
+
 .post-content {
   max-width: 590px;
   margin: 0 auto 3rem auto;
