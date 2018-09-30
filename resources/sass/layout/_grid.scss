@@ -2,6 +2,10 @@
     display: flex;
     max-width: $max-width;
     margin: 0 auto;
+    padding: 0 5rem;
+    @include sm(){
+      padding: 0 10rem;
+    }
 }
 
 @for $width from 1 to 13 {
