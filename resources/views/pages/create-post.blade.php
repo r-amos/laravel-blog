@@ -1,9 +1,10 @@
 @extends('templates.layout')
 @section('content')
+<div class="create">
     <div class="title">
         <h1> Add New Post </h1>
     </div>
-    <div class="content">
+    <div class="create-content">
     <form method="POST" action="/posts">
             @csrf
             <div>
@@ -31,4 +32,5 @@
             </div>
         </form>
     </div>
+</div>
 @endsection
