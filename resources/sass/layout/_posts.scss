@@ -3,7 +3,8 @@
         max-width: $content-width;
         margin: 0 auto;
         margin-bottom: 3rem;
-        border-bottom: 1px $light-black;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $light-black;
         &-link {
             text-decoration: none;
             color: rgba($dark-grey, 0.9);

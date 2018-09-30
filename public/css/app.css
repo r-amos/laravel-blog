@@ -382,7 +382,8 @@ form * button {
   max-width: 590px;
   margin: 0 auto;
   margin-bottom: 3rem;
-  border-bottom: 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .posts__post-link {
@@ -447,7 +448,7 @@ form * button {
   max-width: 590px;
   margin: 0 auto 3rem auto;
   padding-bottom: 3rem;
-  border-bottom: 1px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 /**
@@ -462,7 +463,7 @@ form * button {
   max-width: 590px;
   margin: 0 auto 3rem auto;
   padding-bottom: 3rem;
-  border-bottom: 1px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .post p {
