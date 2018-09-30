@@ -1,5 +1,8 @@
 .sidebar {
-    
+    display: none;
+    @include md() {
+        display: block;
+    }
     &-title {
         margin-bottom: 3rem;
     }

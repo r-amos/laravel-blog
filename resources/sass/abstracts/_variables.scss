@@ -1,3 +1,4 @@
+// Widths
 $max-width: 1200px;
 $content-width: 590px;
 
@@ -10,3 +11,12 @@ $dark-black: rgba(black, 0.8);
 $green: rgba(#1abc9c, 0.8);
 $emerald: #2ecc71;
 $red: #e74c3c;
+
+// Breakpoints
+$breakpoints: (
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px
+);
+

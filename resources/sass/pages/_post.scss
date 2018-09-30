@@ -1,4 +1,3 @@
-@import '../abstracts/mixins';
 .post {
     &-content {
         @include content();
