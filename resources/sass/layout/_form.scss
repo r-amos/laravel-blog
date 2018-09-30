@@ -1,12 +1,12 @@
 form {
     font-size: 1.6rem;
     font-weight: 700;
-    color: rgba(#444444, 0.9);
+    color: rgba($dark-grey, 0.9);
 
     * {
         font-family: 'Asap', sans-serif;
         font-size: 1.6rem;
-        color: rgba(#444444, 0.9);
+        color: rgba($dark-grey, 0.9);
     }
     * input, select {
         height: 3rem;
@@ -14,7 +14,7 @@ form {
         margin-bottom: 2rem;
         display: block;
         width: 50%;
-        border: 1px solid rgba(#444444, 0.8);
+        border: 1px solid rgba($dark-grey, 0.8);
         border-radius: 3px;
         background-color: rgba(white, 0.5);
     }
@@ -34,7 +34,7 @@ form {
         font-size: 1.6rem;
         font-weight: 700;
         color: $white;
-        background-color: rgba(#444444, 0.9);
+        background-color: rgba($dark-grey, 0.9);
         border-radius: 4px;
         cursor: pointer;
     }

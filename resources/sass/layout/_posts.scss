@@ -7,7 +7,7 @@
         max-width: $content-width;
         margin: 0 auto;
         margin-bottom: 3rem;
-        border-bottom: 1px solid rgba(black, 0.2);
+        border-bottom: 1px $light-black;
         > h2 {
             margin-bottom: 1.5rem;
         }
@@ -20,9 +20,9 @@
         }
         * a {
             text-decoration: none;
-            color: rgba(#444444, 0.9);
+            color: rgba($dark-grey, 0.9);
             &:visited {
-                color:#444444;;
+                color:$dark-grey;
             }
         }
         p {
