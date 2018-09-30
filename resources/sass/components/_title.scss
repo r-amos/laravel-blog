@@ -1,4 +1,11 @@
 .title {
+    h1 {
+        text-align: center;
+        @include sm {
+            text-align: left;
+        }
+    }
+    text-align: justify;
     max-width: $content-width;
     margin: 0 auto 5rem auto;
 }

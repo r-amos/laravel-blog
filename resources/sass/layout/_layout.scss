@@ -1,0 +1,8 @@
+.layout {
+    &__right {
+        display: none;
+        @include md(){
+            display: block;
+        }
+    }
+}

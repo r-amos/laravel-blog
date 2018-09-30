@@ -3,12 +3,12 @@
             <div class="container">
                 @include('layouts.header')
                 <div class="flex-container">
-                    <div class="col-11">
+                    <div class="col-11 layout layout__left">
                         <main>
                             @yield('content')
                         </main>
                     </div>
-                    <div class="col-1">
+                    <div class="col-1 layout layout__right">
                         <aside>
                             @include('layouts.sidepanel')
                         </aside>
