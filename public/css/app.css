@@ -578,6 +578,71 @@ form * button {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.tag-content .heading {
+  margin-bottom: 5rem;
+}
+
+.tag__section-title {
+  margin: 5rem 0rem;
+  position: relative;
+}
+
+.tag__section-title:after {
+  position: absolute;
+  content: "";
+  background-color: rgba(102, 102, 102, 0.5);
+  height: 3px;
+  width: 30%;
+  bottom: -1rem;
+  left: 0;
+  border-radius: 5px;
+}
+
+.tag__add {
+  margin-bottom: 2rem;
+}
+
+.tag__add form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tag__input {
+  width: 50%;
+  height: 3.2rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.tag__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tag__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 /*
 Monokai style - ported by Luigi Maselli - http://grigio.org
 */

@@ -49,4 +49,29 @@ class TagsController extends Controller
         // Else, redirect home
         return redirect('/');
     }
+
+    /**
+     * Store new Tag
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(Request $request): \Illuminate\Http\RedirectResponse
+    {
+        Tag::create([
+            'name' => $request['name']
+        ]);
+        return redirect('/tags');
+    }
+    /**
+     * Delete Tag & return tags view
+     *
+     * @param Tag $tag
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy(Tag $tag):  \Illuminate\Http\RedirectResponse
+    {
+        $tag->delete();
+        return redirect('/tags');
+    }
+    
 }

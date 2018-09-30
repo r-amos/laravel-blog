@@ -25,7 +25,8 @@ Route::put('/posts/{post}/update', 'PostsController@update');
 Route::delete('/posts/{post}', 'PostsController@destroy');
 
 Route::get('/tags', 'TagsController@index');
-//Route::get('/tags', 'TagsController@store');
+Route::delete('tags/{tag}', 'TagsController@destroy');
+Route::post('/tags', 'TagsController@store');
 Route::get('/posts/tags/{tag}', 'TagsController@index');
 
 Auth::routes();

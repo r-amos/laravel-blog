@@ -1,5 +1,45 @@
 .tag {
     &-content {
         @include content();
+        .heading {
+            margin-bottom: 5rem;
+        }
+    }
+    &__section-title {
+        margin: 5rem 0rem;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: "";
+            background-color: rgba($light-grey, 0.5);
+            height: 3px;
+            width: 30%;
+            bottom: -1rem;
+            left: 0;
+            border-radius: 5px;
+        }
+    }
+    &__add {
+        form {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        margin-bottom: 2rem;
+    }
+    &__input {
+        width: 50%;
+        height: 3.2rem;
+        align-self: center;
+        border-radius: 0.5rem;
+        border: none;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: row;
     }
 }
