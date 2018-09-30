@@ -1,8 +1,8 @@
 @extends('templates.layout')
 @section('content')
     <div class="title">
-        <h1>{{ isset($tag) ? $tag : '' }} Mumblings.</h1>
-        <div class="sub-heading">Me, writing shit on topics I know little. These include but are not limited to JavaScript, CSS, React, PHP. Anything.</div>
+        <h1>{{ isset($tag) ? $tag : '' }} Ramblings.</h1>
+        <div class="sub-heading">Collection of ramblings on topics I know little.</div>
        @include('components.create')
     </div>
     @foreach($posts as $post)
