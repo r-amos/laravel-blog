@@ -103,14 +103,14 @@ class PostsController extends Controller
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
-    {
+    {     
         (Post::create([
             'title' => $request['blog-title'],
             'description' => $request['blog-description'],
             'content' => $request['blog-content'],
             'user_id' => auth()->id(),
         ]))
-            ->createTagsRelationship($request['blog-topic']);
+            ->createTagsRelationship($request['topics']);
         return redirect('/posts');
     }
 

@@ -4,5 +4,9 @@
  * application frontend using useful Laravel and JavaScript libraries.
  */
 import hljs from 'highlight.js';
+import { topic } from './topic';
+
+topic();
+
 hljs.initHighlightingOnLoad();
 

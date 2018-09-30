@@ -79,11 +79,16 @@ module.exports = __webpack_require__(180);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_highlight_js__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_highlight_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_highlight_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__topic__ = __webpack_require__(185);
 /**
  * First, we will load all of this project's Javascript utilities and other
  * dependencies. Then, we will be ready to develop a robust and powerful
  * application frontend using useful Laravel and JavaScript libraries.
  */
+
+
+
+Object(__WEBPACK_IMPORTED_MODULE_1__topic__["a" /* topic */])();
 
 __WEBPACK_IMPORTED_MODULE_0_highlight_js___default.a.initHighlightingOnLoad();
 
@@ -17636,6 +17641,39 @@ module.exports = function(hljs) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = topic;
+
+function topic() {
+    getTopicButton();
+}
+
+var getTopicButton = function getTopicButton() {
+    document.getElementById('js-topic-button').addEventListener('click', function (event) {
+        event.preventDefault();
+        var topics = getTopicCollection(),
+            dropDown = getTopicInput();
+        dropDown.name = 'topics[' + topics.children.length + ']';
+        topics.appendChild(dropDown);
+    });
+};
+
+var getTopicCollection = function getTopicCollection() {
+    return document.getElementById('js-topics');
+};
+
+var getTopicInput = function getTopicInput() {
+    return document.getElementById('js-topic-dropdown').cloneNode(true);
+};
 
 /***/ })
 /******/ ]);

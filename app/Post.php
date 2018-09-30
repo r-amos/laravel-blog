@@ -80,11 +80,12 @@ class Post extends Model
     {
         return $this->created_at->format('F jS, Y');
     }
-    public function createTagsRelationship($tag)
+    public function createTagsRelationship($tags)
     {
-        $this->tags()->attach(
-            Tag::getIdFromName($tag)
-        );
+        $tagIdentifiers = array_map(function($tag){
+            return Tag::getIdFromName($tag);
+        }, $tags);
+        $this->tags()->attach($tagIdentifiers);
     }
     public function updateTagsRelationship($tag)
     {

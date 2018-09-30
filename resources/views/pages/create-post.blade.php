@@ -13,11 +13,16 @@
             </div>
             <div>
                 <label>Topic</label>
-                <select name="blog-topic">
-                    @foreach($tags as $tag)
-                    <option value="{{ $tag }}">{{ $tag }}</option>
-                    @endforeach
-                </select>
+                <div id="js-topics">
+                    <select id="js-topic-dropdown" name="topics[0]">
+                        @foreach($tags as $tag)
+                        <option value="{{ $tag }}">{{ $tag }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <button id="js-topic-button" class="create-topic__button">
+                    Add Topic
+                </button>
             </div>
             <div>
                 <label for="description">Description:</label>

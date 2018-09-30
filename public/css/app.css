@@ -537,6 +537,12 @@ form * button {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.create-topic__button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
 .login-content {
   max-width: 590px;
   margin: 0 auto 3rem auto;
