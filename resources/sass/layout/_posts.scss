@@ -1,24 +1,10 @@
 .posts {
-    &__container {
-
-    }
-
     &__post {
         max-width: $content-width;
         margin: 0 auto;
         margin-bottom: 3rem;
         border-bottom: 1px $light-black;
-        > h2 {
-            margin-bottom: 1.5rem;
-        }
-        .sub-heading {
-            margin-bottom: 1.5rem;
-        }
-        > h4 {
-            margin-top: 1.4rem;
-            padding-bottom: 0.5rem;
-        }
-        * a {
+        &-link {
             text-decoration: none;
             color: rgba($dark-grey, 0.9);
             &:visited {

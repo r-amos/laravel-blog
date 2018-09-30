@@ -3,9 +3,8 @@
     <div class="title">
         <h1> Edit: {{ $post->title }} </h1>
     </div>
-    <div class="content">    
-</form>
-    <form method="POST" action="/posts/{{ $post->slug }}/update">
+    <div class="post-content">    
+        <form method="POST" action="/posts/{{ $post->slug }}/update">
             @method('PUT')
             @csrf
             <div>
@@ -13,7 +12,7 @@
                 <input id="title" name="blog-title" type="text" value="{{ $post->title }}" />
             </div>
             <div>
-                <label>Topic</label>
+                 <label>Topic</label>
                 <select name="blog-topic">
                     @foreach($tags as $tag)
                     <option value="{{ $tag }}">{{ $tag }}</option>

@@ -1,31 +1,31 @@
-footer {
+.footer {
     background-color: $dark-black;
     height: 6rem;
     flex-shrink: 0;
-    > ul {
+    &__list {
         display: flex;
         list-style: none;
         justify-content: center;
         align-items: center;
         height: 100%;
-        > li {
-            font-weight: 700;
-            font-size: 1.6rem;
-            margin-right: 5rem;
-            display: flex;
-            align-items: center;
-            > svg {
-                height: 2rem;
-                margin-right: 1rem;
-                fill: $white;
-            }
-            a {
-                color: rgba($white, 0.8);
-                text-decoration: none;
-            }
-            a:visited{
-                color: rgba($white, 0.8);
-            }
+    }
+    &__link {
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-right: 5rem;
+        display: flex;
+        align-items: center;
+        > svg {
+            height: 2rem;
+            margin-right: 1rem;
+            fill: $white;
+        }
+    }
+    &__anchor {
+        color: rgba($white, 0.8);
+        text-decoration: none;
+        &:visited{
+            color: rgba($white, 0.8);
         }
     }
 }

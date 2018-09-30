@@ -1,0 +1,19 @@
+/**
+    For a given range of headings, iterate and apply styling
+*/
+@mixin headings($from, $to) {
+    @for $i from $from through $to {
+        h#{$i} {
+            @content;
+        }
+    }
+}
+/**
+* Apply standard content styling
+*/
+@mixin content(){
+    max-width: $content-width;
+    margin: 0 auto 3rem auto;
+    padding-bottom: 3rem;
+    border-bottom: 1px $light-black;
+}

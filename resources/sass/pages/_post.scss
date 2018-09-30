@@ -1,10 +1,14 @@
-.content {
-    max-width: $content-width;
-    margin: 0 auto 3rem auto;
-    padding-bottom: 3rem;
-    border-bottom: 1px $light-black;
-}
-
-p {
-    padding: 0 0 2rem 0;
+@import '../abstracts/mixins';
+.post {
+    &-content {
+        @include content();
+    }
+    p {
+        padding: 0 0 2rem 0;
+    }
+    &.edit-actions {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1.6rem;
+    }
 }

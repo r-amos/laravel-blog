@@ -7,7 +7,7 @@
     @foreach($posts as $post)
             <div class="posts__post">
                 <h2>
-                    <a href="/posts/{{ urlencode($post['slug']) }}">{{ $post['title'] }}</a>
+                    <a class="posts__post-link" href="/posts/{{ urlencode($post['slug']) }}">{{ $post['title'] }}</a>
                 </h2>
                 <div class="sub-heading">
                     {{$post->formattedDate()}}
