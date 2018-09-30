@@ -6,6 +6,10 @@
     p {
         padding: 0 0 2rem 0;
     }
+    &.create-actions {
+        max-width: $content-width;
+        margin: 1.6rem auto 0 auto;
+    }
     &.edit-actions {
         display: flex;
         flex-direction: row;

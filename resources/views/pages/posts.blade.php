@@ -3,6 +3,7 @@
     <div class="title">
         <h1>{{ isset($tag) ? $tag : '' }} Mumblings.</h1>
         <div class="sub-heading">Me, writing shit on topics I know little. These include but are not limited to JavaScript, CSS, React, PHP. Anything.</div>
+       @include('components.create')
     </div>
     @foreach($posts as $post)
             <div class="posts__post">

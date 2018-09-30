@@ -470,6 +470,11 @@ form * button {
   padding: 0 0 2rem 0;
 }
 
+.post.create-actions {
+  max-width: 590px;
+  margin: 1.6rem auto 0 auto;
+}
+
 .post.edit-actions {
   display: -webkit-box;
   display: -ms-flexbox;
