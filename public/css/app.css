@@ -65,6 +65,7 @@ body {
   border: none;
   cursor: pointer;
   color: #dfe4ea;
+  padding: 0.5rem 2rem;
 }
 
 .button:visited {
@@ -73,12 +74,10 @@ body {
 
 .button--edit {
   background-color: #2ecc71;
-  padding: 0.5rem 2rem;
 }
 
 .button--delete {
   background-color: #e74c3c;
-  padding: 1rem 2rem;
 }
 
 code {
@@ -570,6 +569,13 @@ form * button {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 1.6rem;
+}
+
+.tag-content {
+  max-width: 590px;
+  margin: 0 auto 3rem auto;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 /*

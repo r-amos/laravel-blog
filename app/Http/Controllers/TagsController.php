@@ -2,24 +2,51 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Tag;
 use App\Post;
+use App\Tag;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
+/**
+ * TagsController class responsible for handling requests
+ * for Tag Models.
+ *
+ * TagsController class contains the logic responsible for handling
+ * create, read, update and delete requests in relation to a Tag or
+ *  collection of Tags.
+ */
 class TagsController extends Controller
 {
-    public function index(Tag $tag = null)
-    {    
-        if (is_null($tag)) {
-            return Tag::all();
+    /**
+     * Return all tags or filtered posts
+     * 
+     * Checks for a specific tag being provided and returns 
+     * posts view with the related Post models as data for those
+     * that are related. If not tag provided, returns all Tags
+     *
+     * @param Tag $tag
+     * @return \Illuminate\View\View | \Illuminate\Http\RedirectResponse
+     */
+    public function index(Tag $tag = null): object
+    {
+        // If not tag id provided in URL and user authenticated, return Tag Creation
+        if (is_null($tag) && Auth::check()) {
+            return view(
+                'pages.tags',
+                ['tags' => Tag::all()]
+            );
         }
-        return view(
-            'pages.posts', 
-            [
-                'posts' => Post::getPageItems($tag->posts->toArray()),
-                'tag' => $tag->name
-            ]
-        );
+        // If Tag Provide, get related Posts
+        if (!is_null($tag)) {
+            return view(
+                'pages.posts',
+                [
+                    'posts' => Post::getPageItems($tag->posts->toArray()),
+                    'tag' => $tag->name,
+                ]
+            );
+        }
+        // Else, redirect home
+        return redirect('/');
     }
 }

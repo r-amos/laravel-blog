@@ -8,15 +8,14 @@
     border: none;
     cursor: pointer;
     color: $white;
+    padding: 0.5rem 2rem;
     &:visited {
         color: $white;
     }
     &--edit {
         background-color: $emerald;
-        padding: 0.5rem 2rem;
     }
     &--delete {
         background-color: $red;
-        padding: 1rem 2rem;
     }
 }

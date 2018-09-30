@@ -1,0 +1,5 @@
+.tag {
+    &-content {
+        @include content();
+    }
+}
