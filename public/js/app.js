@@ -17652,7 +17652,6 @@ module.exports = function(hljs) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = topic;
-
 function topic() {
     addTopicActionListener();
 }
@@ -17665,6 +17664,12 @@ var addTopicActionListener = function addTopicActionListener() {
             var topics = getTopicCollection(),
                 dropDown = getTopicInput();
             dropDown.name = 'topics[' + topics.children.length + ']';
+            var selectedTopics = getTopicsSelected(topics);
+            Array.from(dropDown.children).forEach(function (element) {
+                if (selectedTopics.includes(element.value)) {
+                    element.remove();
+                }
+            });
             topics.appendChild(dropDown);
         });
     }
@@ -17680,6 +17685,12 @@ var getTopicCollection = function getTopicCollection() {
 
 var getTopicInput = function getTopicInput() {
     return document.getElementById('js-topic-dropdown').cloneNode(true);
+};
+
+var getTopicsSelected = function getTopicsSelected(topicCollection) {
+    return Array.from(topicCollection.children).map(function (element) {
+        return element.value;
+    });
 };
 
 /***/ })

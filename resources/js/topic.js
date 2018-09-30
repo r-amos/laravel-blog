@@ -1,16 +1,21 @@
-
 export function topic() {
     addTopicActionListener();
 }
 
 const addTopicActionListener = function() {
     const button = getTopicButton();
-    if(button) {
+    if (button) {
         button.addEventListener('click', (event) => {
             event.preventDefault();
             const topics = getTopicCollection(), 
                 dropDown = getTopicInput();
             dropDown.name = `topics[${topics.children.length}]`;
+            const selectedTopics = getTopicsSelected(topics);
+            Array.from(dropDown.children).forEach((element) => {
+                if (selectedTopics.includes(element.value)) {
+                    element.remove();
+                }
+            });
             topics.appendChild(dropDown);
         });
     }
@@ -28,3 +33,8 @@ const getTopicInput = function() {
     return document.getElementById('js-topic-dropdown')
         .cloneNode(true);
 }
+
+const getTopicsSelected = function(topicCollection) {
+    return Array.from(topicCollection.children).map((element) => element.value); 
+}
+
