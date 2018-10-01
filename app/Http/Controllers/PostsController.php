@@ -113,7 +113,15 @@ class PostsController extends Controller
             ->createTagsRelationship($request['topics']);
         return redirect('/posts');
     }
-
+    /**
+     * Return Edit Post View
+     * 
+     * Returns the edit ppost view, along with all the tag names within the
+     * database as an array of data.
+     *
+     * @param Post $post
+     * @return \Illuminate\View\View
+     */
     public function edit(Post $post): \Illuminate\View\View
     {
         return view('pages.edit-post', [
@@ -122,9 +130,19 @@ class PostsController extends Controller
         ]);
     }
 
-    public function update(Post $post, Request $request)
+    /**
+     * Edits An Existing Post and Redirects To Post.
+     * 
+     * Given a request with post data, extract and map the relevant fields
+     * saving editing post. Once saved update the relationships to the tags
+     * and redirect to the newly edited Post.
+     *
+     * @param Post $post
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(Post $post, Request $request): \Illuminate\Http\RedirectResponse
     {
-
         // Update Post With Request Data.
         $post->title = $request['blog-title'];
         $post->description = $request['blog-description'];
@@ -137,17 +155,20 @@ class PostsController extends Controller
         // Redirect
         $slug = $post->slug;
         return redirect("/posts/{$slug}");
-
     }
 
-    public function destroy(Post $post)
+    /**
+     * Delete Post
+     * 
+     * Given an id, delete the post and return to the posts index page
+     *
+     * @param Post $post
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy(Post $post): \Illuminate\Http\RedirectResponse
     {
         $post->delete();
         return redirect("/posts");
     }
-
-    private function getPaginationStart($currentPage)
-    {
-        return (self::PAGE_LIMIT * $currentPage) - self::PAGE_LIMIT;
-    }
+    
 }

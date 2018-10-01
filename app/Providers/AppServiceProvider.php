@@ -15,9 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Make Topics Available In Sidepanel
         view()->composer('layouts.sidepanel', function($view) {
             $view->with('tags', \App\Tag::all()->pluck(['name']));
         });
+        // SVG Directive For Use In Blade Templates
         Blade::directive('svg', function ($svg) {
             $file = public_path() . "/svg/{$svg}.svg";
             return file_get_contents($file);
