@@ -445,6 +445,13 @@ form * button {
   color: #dfe4ea;
 }
 
+.main-navigation .navigation__item--logout a {
+  background-color: #e74c3c;
+  border-radius: 5px;
+  padding: 1rem;
+  font-weight: 700;
+}
+
 .pagination {
   margin: 3rem 0rem;
 }
