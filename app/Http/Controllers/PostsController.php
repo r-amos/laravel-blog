@@ -14,12 +14,14 @@ use Illuminate\Http\Request;
  * create, read, update and delete requests in relation to a Post or
  * collection of Posts.
  */
+
 class PostsController extends Controller
 {
 
     /**
      * Define the number of posts per page to be used in pagination
      */
+
     const PAGE_LIMIT = 5;
 
     /**
@@ -30,6 +32,7 @@ class PostsController extends Controller
      *
      * @return void
      */
+
     public function __construct()
     {
         $this->middleware('auth')
@@ -46,6 +49,7 @@ class PostsController extends Controller
      *
      * @return \Illuminate\View\View
      */
+
     public function index(): \Illuminate\View\View
     {
         return view(
@@ -71,11 +75,13 @@ class PostsController extends Controller
      * @param Post $post
      * @return \Illuminate\View\View
      */
+
     public function show(Post $post): \Illuminate\View\View
     {
         $post->convertMarkdownContent();
         return view('pages.post', compact('post'));
     }
+
     /**
      * Return Post Creation View
      *
@@ -85,12 +91,14 @@ class PostsController extends Controller
      *
      * @return \Illuminate\View\View
      */
+
     public function create(): \Illuminate\View\View
     {
         return view('pages.create-post', [
             'tags' => \App\Tag::all()->pluck(['name']),
         ]);
     }
+
     /**
      * Creates A Post In The Database & Redirects To Posts Index
      *
@@ -102,6 +110,7 @@ class PostsController extends Controller
      * @param Request $request
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
      */
+
     public function store(Request $request)
     {     
         (Post::create([
@@ -113,6 +122,7 @@ class PostsController extends Controller
             ->createTagsRelationship($request['topics']);
         return redirect('/posts');
     }
+
     /**
      * Return Edit Post View
      * 
@@ -122,6 +132,7 @@ class PostsController extends Controller
      * @param Post $post
      * @return \Illuminate\View\View
      */
+
     public function edit(Post $post): \Illuminate\View\View
     {
         return view('pages.edit-post', [
@@ -141,6 +152,7 @@ class PostsController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
+
     public function update(Post $post, Request $request): \Illuminate\Http\RedirectResponse
     {
         // Update Post With Request Data.
@@ -165,10 +177,11 @@ class PostsController extends Controller
      * @param Post $post
      * @return \Illuminate\Http\RedirectResponse
      */
+
     public function destroy(Post $post): \Illuminate\Http\RedirectResponse
     {
         $post->delete();
         return redirect("/posts");
     }
-    
+ 
 }
