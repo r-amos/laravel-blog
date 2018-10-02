@@ -1,4 +1,4 @@
-export function topic() {
+const init = function() {
     addTopicActionListener();
 }
 
@@ -37,4 +37,6 @@ const getTopicInput = function() {
 const getTopicsSelected = function(topicCollection) {
     return Array.from(topicCollection.children).map((element) => element.value); 
 }
+
+export default init;
 

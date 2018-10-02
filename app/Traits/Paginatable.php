@@ -4,7 +4,17 @@ namespace App\Traits;
 
 use Illuminate\Pagination\Paginator;
 
-trait Paginatable {
+/**
+ * Paginatable Trait
+ * 
+ * Trait to be used within Models where Paginagtion is required. Adds functionality
+ * to calculate the models required to be displayed for a page as well as the
+ * startin point.
+ * 
+ */
+
+trait Paginatable
+{
 
     public static function getPageItems($items)
     {
@@ -13,7 +23,7 @@ trait Paginatable {
             $paginationStart,
             self::PAGE_LIMIT
         );
-        $models = array_map(function($element){
+        $models = array_map(function ($element) {
             return new self($element);
         }, $pageItems);
         return (new Paginator($models, self::PAGE_LIMIT))
@@ -26,12 +36,3 @@ trait Paginatable {
     }
 
 }
-
-
-
-
-
-
-
-
-

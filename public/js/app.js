@@ -88,8 +88,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_1__topic__["a" /* topic */])();
-
+Object(__WEBPACK_IMPORTED_MODULE_1__topic__["a" /* default */])();
 __WEBPACK_IMPORTED_MODULE_0_highlight_js___default.a.initHighlightingOnLoad();
 
 /***/ }),
@@ -17641,10 +17640,9 @@ module.exports = function(hljs) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = topic;
-function topic() {
+var init = function init() {
     addTopicActionListener();
-}
+};
 
 var addTopicActionListener = function addTopicActionListener() {
     var button = getTopicButton();
@@ -17682,6 +17680,8 @@ var getTopicsSelected = function getTopicsSelected(topicCollection) {
         return element.value;
     });
 };
+
+/* harmony default export */ __webpack_exports__["a"] = (init);
 
 /***/ }),
 /* 181 */
