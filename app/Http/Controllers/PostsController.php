@@ -155,6 +155,7 @@ class PostsController extends Controller
 
     public function update(Post $post, Request $request): \Illuminate\Http\RedirectResponse
     {
+
         // Update Post With Request Data.
         $post->title = $request['blog-title'];
         $post->description = $request['blog-description'];
@@ -162,7 +163,7 @@ class PostsController extends Controller
         $post->save();
 
         // Update Tags Relationship
-        $post->updateTagsRelationship($request['blog-topic']);
+        $post->updateTagsRelationship($request['topics']);
 
         // Redirect
         $slug = $post->slug;

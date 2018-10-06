@@ -12,14 +12,24 @@
                 <input id="title" name="blog-title" type="text" value="{{ $post->title }}" />
             </div>
             <div>
-                 <label>Topic</label>
-                <select name="blog-topic">
-  
-
-                    @foreach($tags as $tag)
-                        <option value="{{ $tag }}">{{ $tag }}</option>
+                 <label>Topics</label>
+                 <div id="js-topics">
+                    @forEach($post->tags as $selectedTag)
+                        <select id="js-topic-dropdown" name="topics[{{$loop->index}}]">
+                            @foreach($tags as $tag)
+                                <option 
+                                    @if($tag === $selectedTag->name) 
+                                        selected
+                                    @endif
+                                    value="{{ $tag }}">{{ $tag }}
+                                 </option>
+                            @endforeach
+                        </select>
                     @endforeach
-                </select>
+                 </div>
+                <button id="js-topic-button" class="create-topic__button">
+                    Add Topic
+                </button>
             </div>
             <div>
                 <label for="description">Description:</label>

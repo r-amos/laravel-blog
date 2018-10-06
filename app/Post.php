@@ -87,10 +87,20 @@ class Post extends Model
         }, $tags);
         $this->tags()->attach($tagIdentifiers);
     }
-    public function updateTagsRelationship($tag)
+    
+    /**
+     * Return An Array Of Tag Ids From An Array Of Tag Names.
+    *
+    * @param [type] $tags
+    * @return void
+    */    
+    public function updateTagsRelationship($tags): void
     {
+        // Map $tags Array To Ids
         $this->tags()->sync(
-            Tag::getIdFromName($tag)
+            array_map(function($tag) {
+                return Tag::getIdFromName($tag);
+            }, $tags)
         );
     }
 }
