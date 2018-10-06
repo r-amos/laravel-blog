@@ -1,9 +1,10 @@
 @if(Auth::user() !== null)
 <div class="post edit-actions">
-    <form action="/posts/{{ urlencode($post['slug']) }}/edit">
+    <form method="POST" action="/posts/{{ urlencode($post['slug']) }}/edit">
+        @method('GET')
         <input type="submit" class="button button--edit" value="Edit" />
     </form>
-    <form action="/posts/{{ $post->slug }}" method="POST">
+    <form method="POST" action="/posts/{{ $post->slug }}" >
         @csrf
         @method('DELETE')
         <input class="button button--delete" type="submit" value="Delete" />
