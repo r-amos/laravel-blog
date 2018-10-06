@@ -5,7 +5,6 @@
         <h1>Edit Topics.</h1>
     </div>
     <div>
-        <h2 class="tag__section-title">New</h2>
         <div class="tag__add">
             <form action="/tags" method="POST">
                 @csrf
@@ -13,20 +12,19 @@
                 <input type="submit" class="button button--edit" value="Add">
             </form>
         </div>
-        <h2 class="tag__section-title">Existing</h2>
         @foreach ($tags as $tag)
             <div class="tag__container">
                 <div class="tag__title">
-                    <h4>{{ $tag->name }}</h4>
+                    <p>{{ $tag->name }}</p>
                 </div>
                 <div class="tag__buttons">
-                    <form>
-                        <input type="submit" class="button button--edit" value="Edit">
-                    </form>
                     <form action="/tags/{{ $tag->name }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <input type="submit" class="button button--delete" value="Delete">
+                    </form>
+                    <form>
+                        <input type="submit" class="button button--edit" value="Edit">
                     </form>
                 </div>
             </div>
