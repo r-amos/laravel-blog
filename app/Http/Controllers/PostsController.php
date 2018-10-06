@@ -134,7 +134,7 @@ class PostsController extends Controller
      */
 
     public function edit(Post $post): \Illuminate\View\View
-    {
+    {                
         return view('pages.edit-post', [
             'post' => $post,
             'tags' => \App\Tag::all()->pluck(['name']),

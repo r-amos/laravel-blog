@@ -23,9 +23,14 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-
         parent::boot();
+
+        // Whenever A Post Is To Be Injected, Ensure It Is With Tags Populated
+
+        Route::bind('post', function($slug) {
+            return \App\Post::with('tags')->where('slug', $slug)->first();
+        });
+
     }
 
     /**

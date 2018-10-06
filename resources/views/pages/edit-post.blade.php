@@ -14,8 +14,10 @@
             <div>
                  <label>Topic</label>
                 <select name="blog-topic">
+  
+
                     @foreach($tags as $tag)
-                    <option value="{{ $tag }}">{{ $tag }}</option>
+                        <option value="{{ $tag }}">{{ $tag }}</option>
                     @endforeach
                 </select>
             </div>
