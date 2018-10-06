@@ -17642,6 +17642,7 @@ module.exports = function(hljs) {
 "use strict";
 var init = function init() {
     addTopicActionListener();
+    addDeleteActionListener();
 };
 
 var addTopicActionListener = function addTopicActionListener() {
@@ -17651,6 +17652,7 @@ var addTopicActionListener = function addTopicActionListener() {
             event.preventDefault();
             var topics = getTopicCollection(),
                 dropDown = getTopicInput();
+            // @TODO: Dynamically Get The Length Here.            
             dropDown.name = 'topics[' + topics.children.length + ']';
             var selectedTopics = getTopicsSelected(topics);
             Array.from(dropDown.children).forEach(function (element) {
@@ -17659,12 +17661,49 @@ var addTopicActionListener = function addTopicActionListener() {
                 }
             });
             topics.appendChild(dropDown);
+            var deleteButton = createDeleteButton();
+            deleteButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                dropDown.remove();
+                deleteButton.remove();
+                updateIndexes();
+            });
+            topics.appendChild(deleteButton);
         });
     }
 };
 
+var addDeleteActionListener = function addDeleteActionListener() {
+    var buttons = getTopicDeleteButtons();
+    if (buttons) {
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+                var select = button.previousElementSibling;
+                select.remove();
+                button.remove();
+                updateIndexes();
+            });
+        });
+    }
+};
+
+var updateIndexes = function updateIndexes() {
+    Array.from(document.getElementById('js-topics').children).filter(function (element) {
+        return element.tagName === 'SELECT';
+    }).forEach(function (select, index) {
+        select.name = 'topics[' + index + ']';
+    });
+};
+
 var getTopicButton = function getTopicButton() {
     return document.getElementById('js-topic-button');
+};
+
+var getTopicDeleteButtons = function getTopicDeleteButtons() {
+    return Array.from(document.getElementsByTagName('button')).filter(function (element) {
+        return element.id === 'js-delete-tag';
+    });
 };
 
 var getTopicCollection = function getTopicCollection() {
@@ -17679,6 +17718,14 @@ var getTopicsSelected = function getTopicsSelected(topicCollection) {
     return Array.from(topicCollection.children).map(function (element) {
         return element.value;
     });
+};
+
+var createDeleteButton = function createDeleteButton() {
+    var deleteButton = document.createElement("button");
+    deleteButton.className = "button button--delete";
+    deleteButton.innerText = "Delete";
+    deleteButton.id = "js-delete-tag";
+    return deleteButton;
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (init);

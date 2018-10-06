@@ -25,9 +25,10 @@
                                  </option>
                             @endforeach
                         </select>
+                        <button id="js-delete-tag" class="button button--delete">Delete</button>
                     @endforeach
                  </div>
-                <button id="js-topic-button" class="create-topic__button">
+                <button id="js-topic-button" class="create-topic__button button button--update">
                     Add Topic
                 </button>
             </div>
@@ -44,7 +45,7 @@
                 </textarea>
             </div>
             <div>
-                <button type="submit">Update Post!</button>
+                <button class="button button--update" type="submit">Update Post!</button>
             </div>
         </form>
     </div>
