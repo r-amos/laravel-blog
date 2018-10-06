@@ -139,6 +139,30 @@ code {
   text-decoration: none;
 }
 
+.topics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.topics__select {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-right: 2rem;
+}
+
+.topics__button {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  display: inline-block;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
 form {
   font-size: 1.6rem;
   font-weight: 700;

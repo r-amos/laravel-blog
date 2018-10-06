@@ -13,9 +13,9 @@
             </div>
             <div>
                  <label>Topics</label>
-                 <div id="js-topics">
+                 <div class="topics" id="js-topics">
                     @forEach($post->tags as $selectedTag)
-                        <select id="js-topic-dropdown" name="topics[{{$loop->index}}]">
+                        <select class="topics__select" id="js-topic-dropdown" name="topics[{{$loop->index}}]">
                             @foreach($tags as $tag)
                                 <option 
                                     @if($tag === $selectedTag->name) 
@@ -25,7 +25,7 @@
                                  </option>
                             @endforeach
                         </select>
-                        <button id="js-delete-tag" class="button button--delete">Delete</button>
+                        <button id="js-delete-tag" class="button button--delete topics__button">Delete</button>
                     @endforeach
                  </div>
                 <button id="js-topic-button" class="create-topic__button button button--update">

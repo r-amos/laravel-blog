@@ -17722,7 +17722,7 @@ var getTopicsSelected = function getTopicsSelected(topicCollection) {
 
 var createDeleteButton = function createDeleteButton() {
     var deleteButton = document.createElement("button");
-    deleteButton.className = "button button--delete";
+    deleteButton.className = "button button--delete topics__button";
     deleteButton.innerText = "Delete";
     deleteButton.id = "js-delete-tag";
     return deleteButton;

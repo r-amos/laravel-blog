@@ -1,0 +1,16 @@
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    &__select {
+        flex-basis: 40%;
+        margin-right: 2rem;
+    }
+    &__button {
+        flex-basis: 10%;
+        display: inline-block;
+        align-self: center;
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+    }
+
+}
