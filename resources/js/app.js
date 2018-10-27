@@ -4,7 +4,7 @@
  * application frontend using useful Laravel and JavaScript libraries.
  */
 import hljs from 'highlight.js';
-import taskInit from './topic';
+import taskInit from './tag';
 
 taskInit();
 hljs.initHighlightingOnLoad();

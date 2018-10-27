@@ -2,7 +2,7 @@
 @section('content')
     <div class="title">
         <h1>{{ isset($tag) ? $tag : '' }} Ramblings.</h1>
-        <div class="sub-heading">Collection of ramblings on topics I know little.</div>
+        <div class="sub-heading">Collection of ramblings on tags I know little.</div>
        @include('components.create')
     </div>
     @foreach($posts as $post)
@@ -13,7 +13,7 @@
                 <div class="sub-heading">
                     {{$post->formattedDate()}}
                 </div>
-                @include('components.topics')
+                @include('components.tags')
                 <p>{{ $post['description'] }}</p>
                 @include('components.edit')
             </div>

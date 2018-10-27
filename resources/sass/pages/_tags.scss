@@ -37,7 +37,9 @@
     }
     &__container {
         display: flex;
-        justify-content: space-between;
+        &--spaced {
+            justify-content: space-between;
+        }
     }
     &__buttons {
         display: flex;

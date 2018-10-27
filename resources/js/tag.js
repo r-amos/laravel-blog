@@ -1,24 +1,24 @@
 const init = function() {
-    addTopicActionListener();
+    addTagActionListener();
     addDeleteActionListener();
 }
 
-const addTopicActionListener = function() {
-    const button = getTopicButton();
+const addTagActionListener = function() {
+    const button = getTagButton();
     if (button) {
         button.addEventListener('click', (event) => {
             event.preventDefault();
-            const topics = getTopicCollection(), 
-                dropDown = getTopicInput();
+            const tags = getTagCollection(), 
+                dropDown = getTagInput();
                 // @TODO: Dynamically Get The Length Here.            
-                dropDown.name = `topics[${topics.children.length}]`;
-            const selectedTopics = getTopicsSelected(topics);
+                dropDown.name = `tags[${tags.children.length}]`;
+            const selectedTags = getTagsSelected(tags);
             Array.from(dropDown.children).forEach((element) => {
-                if (selectedTopics.includes(element.value)) {
+                if (selectedTags.includes(element.value)) {
                     element.remove();
                 }
             });
-            topics.appendChild(dropDown);
+            tags.appendChild(dropDown);
             const deleteButton = createDeleteButton();
             deleteButton.addEventListener('click', (event) => {
                 event.preventDefault();
@@ -26,13 +26,13 @@ const addTopicActionListener = function() {
                 deleteButton.remove();
                 updateIndexes();
             });
-            topics.appendChild(deleteButton);
+            tags.appendChild(deleteButton);
         });
     }
 }
 
 const addDeleteActionListener = function() {
-    const buttons = getTopicDeleteButtons();
+    const buttons = getTagDeleteButtons();
     if (buttons) {
         buttons.forEach((button) => {
             button.addEventListener('click', (event) => {
@@ -47,39 +47,39 @@ const addDeleteActionListener = function() {
 }
 
 const updateIndexes = function() {
-    Array.from(document.getElementById('js-topics').children).filter((element) => {
+    Array.from(document.getElementById('js-tags').children).filter((element) => {
             return element.tagName === 'SELECT';
         }).forEach((select, index) => {
-            select.name=`topics[${index}]`; 
+            select.name=`tags[${index}]`; 
         }); 
 }
 
-const getTopicButton = function() {
-    return document.getElementById('js-topic-button');
+const getTagButton = function() {
+    return document.getElementById('js-tag-button');
 }
 
-const getTopicDeleteButtons = function() {
+const getTagDeleteButtons = function() {
     return Array.from(document.getElementsByTagName('button')).filter((element) => {
         return element.id === 'js-delete-tag'
     });
 }
 
-const getTopicCollection = function() {
-    return document.getElementById('js-topics');
+const getTagCollection = function() {
+    return document.getElementById('js-tags');
 }
 
-const getTopicInput = function() {
-    return document.getElementById('js-topic-dropdown')
+const getTagInput = function() {
+    return document.getElementById('js-tag-dropdown')
         .cloneNode(true);
 }
 
-const getTopicsSelected = function(topicCollection) {
-    return Array.from(topicCollection.children).map((element) => element.value); 
+const getTagsSelected = function(tagCollection) {
+    return Array.from(tagCollection.children).map((element) => element.value); 
 }
 
 const createDeleteButton = function() {
     const deleteButton = document.createElement("button");
-    deleteButton.className = "button button--delete topics__button";
+    deleteButton.className = "button button--delete tags__button";
     deleteButton.innerText = "Delete"
     deleteButton.id="js-delete-tag";
     return deleteButton;

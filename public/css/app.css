@@ -108,7 +108,7 @@ code {
   }
 }
 
-.topic {
+.tag {
   border-radius: 5px;
   background-color: rgba(26, 188, 156, 0.8);
   padding: 8px 12px;
@@ -118,7 +118,7 @@ code {
   color: rgba(223, 228, 234, 0.9) !important;
 }
 
-.topic__container {
+.tag__container {
   margin: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,15 +131,15 @@ code {
       flex-wrap: wrap;
 }
 
-.topic__container > a {
+.tag__container > a {
   text-decoration: none;
 }
 
-.topic__container > a:visited {
+.tag__container > a:visited {
   text-decoration: none;
 }
 
-.topics {
+.tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,13 +147,13 @@ code {
       flex-wrap: wrap;
 }
 
-.topics__select {
+.tags__select {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   margin-right: 2rem;
 }
 
-.topics__button {
+.tags__button {
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%;
   display: inline-block;
@@ -534,7 +534,7 @@ form * button {
   margin-bottom: 3rem;
 }
 
-.sidebar-topic__container {
+.sidebar-tag__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,7 +544,7 @@ form * button {
   margin-bottom: 1rem;
 }
 
-.sidebar-topic__container > a {
+.sidebar-tag__container > a {
   display: inline-block;
   margin-left: 1rem;
 }
@@ -581,7 +581,7 @@ form * button {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.create-topic__button {
+.create-tag__button {
   padding: 1rem;
   font-size: 1.2rem;
   margin-bottom: 3rem;
@@ -679,6 +679,9 @@ form * button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.tag__container--spaced {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

@@ -12,16 +12,16 @@
                 <input id="title" name="blog-title" type="text" />
             </div>
             <div>
-                <label>Topic</label>
-                <div id="js-topics">
-                    <select id="js-topic-dropdown" name="topics[0]">
+                <label>Tag</label>
+                <div id="js-tags">
+                    <select id="js-tag-dropdown" name="tags[0]">
                         @foreach($tags as $tag)
                         <option value="{{ $tag }}">{{ $tag }}</option>
                         @endforeach
                     </select>
                 </div>
-                <button id="js-topic-button" class="create-topic__button">
-                    Add Topic
+                <button id="js-tag-button" class="create-tag__button">
+                    Add Tag
                 </button>
             </div>
             <div>

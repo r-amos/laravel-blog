@@ -2,7 +2,7 @@
 @section('content')
 <div class="tag-content">
     <div class="heading heading__container">
-        <h1>Edit Topics.</h1>
+        <h1>Edit Tags.</h1>
     </div>
     <div>
         <div class="tag__add">
@@ -13,7 +13,7 @@
             </form>
         </div>
         @foreach ($tags as $tag)
-            <div class="tag__container">
+            <div class="tag__container tag__container--spaced">
                 <div class="tag__title">
                     <p>{{ $tag->name }}</p>
                 </div>

@@ -6,7 +6,7 @@
             <div class="sub-heading">
                 {{$post->formattedDate()}}
             </div>
-            @include('components.topics')
+            @include('components.tags')
         </div>
         <div class="post-content">
             <p class="summary">

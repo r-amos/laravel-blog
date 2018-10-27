@@ -105,7 +105,7 @@ class PostsController extends Controller
      * Give a request containing post information (title, description, content) the
      * currently authenticated user is retrieved and used to create a new Post Model.
      * The tags relationship is also created by calling createTagsRelationship on the
-     * newly created blog model and passing in the topics recieved as part of the request.
+     * newly created blog model and passing in the tags recieved as part of the request.
      *
      * @param Request $request
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
@@ -119,7 +119,7 @@ class PostsController extends Controller
             'content' => $request['blog-content'],
             'user_id' => auth()->id(),
         ]))
-            ->createTagsRelationship($request['topics']);
+            ->createTagsRelationship($request['tags']);
         return redirect('/posts');
     }
 
@@ -163,7 +163,7 @@ class PostsController extends Controller
         $post->save();
 
         // Update Tags Relationship
-        $post->updateTagsRelationship($request['topics']);
+        $post->updateTagsRelationship($request['tags']);
 
         // Redirect
         $slug = $post->slug;

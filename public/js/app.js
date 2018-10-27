@@ -79,7 +79,7 @@ module.exports = __webpack_require__(181);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_highlight_js__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_highlight_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_highlight_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__topic__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tag__ = __webpack_require__(180);
 /**
  * First, we will load all of this project's Javascript utilities and other
  * dependencies. Then, we will be ready to develop a robust and powerful
@@ -88,7 +88,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_1__topic__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_1__tag__["a" /* default */])();
 __WEBPACK_IMPORTED_MODULE_0_highlight_js___default.a.initHighlightingOnLoad();
 
 /***/ }),
@@ -17641,26 +17641,26 @@ module.exports = function(hljs) {
 
 "use strict";
 var init = function init() {
-    addTopicActionListener();
+    addTagActionListener();
     addDeleteActionListener();
 };
 
-var addTopicActionListener = function addTopicActionListener() {
-    var button = getTopicButton();
+var addTagActionListener = function addTagActionListener() {
+    var button = getTagButton();
     if (button) {
         button.addEventListener('click', function (event) {
             event.preventDefault();
-            var topics = getTopicCollection(),
-                dropDown = getTopicInput();
+            var tags = getTagCollection(),
+                dropDown = getTagInput();
             // @TODO: Dynamically Get The Length Here.            
-            dropDown.name = 'topics[' + topics.children.length + ']';
-            var selectedTopics = getTopicsSelected(topics);
+            dropDown.name = 'tags[' + tags.children.length + ']';
+            var selectedTags = getTagsSelected(tags);
             Array.from(dropDown.children).forEach(function (element) {
-                if (selectedTopics.includes(element.value)) {
+                if (selectedTags.includes(element.value)) {
                     element.remove();
                 }
             });
-            topics.appendChild(dropDown);
+            tags.appendChild(dropDown);
             var deleteButton = createDeleteButton();
             deleteButton.addEventListener('click', function (event) {
                 event.preventDefault();
@@ -17668,13 +17668,13 @@ var addTopicActionListener = function addTopicActionListener() {
                 deleteButton.remove();
                 updateIndexes();
             });
-            topics.appendChild(deleteButton);
+            tags.appendChild(deleteButton);
         });
     }
 };
 
 var addDeleteActionListener = function addDeleteActionListener() {
-    var buttons = getTopicDeleteButtons();
+    var buttons = getTagDeleteButtons();
     if (buttons) {
         buttons.forEach(function (button) {
             button.addEventListener('click', function (event) {
@@ -17689,40 +17689,40 @@ var addDeleteActionListener = function addDeleteActionListener() {
 };
 
 var updateIndexes = function updateIndexes() {
-    Array.from(document.getElementById('js-topics').children).filter(function (element) {
+    Array.from(document.getElementById('js-tags').children).filter(function (element) {
         return element.tagName === 'SELECT';
     }).forEach(function (select, index) {
-        select.name = 'topics[' + index + ']';
+        select.name = 'tags[' + index + ']';
     });
 };
 
-var getTopicButton = function getTopicButton() {
-    return document.getElementById('js-topic-button');
+var getTagButton = function getTagButton() {
+    return document.getElementById('js-tag-button');
 };
 
-var getTopicDeleteButtons = function getTopicDeleteButtons() {
+var getTagDeleteButtons = function getTagDeleteButtons() {
     return Array.from(document.getElementsByTagName('button')).filter(function (element) {
         return element.id === 'js-delete-tag';
     });
 };
 
-var getTopicCollection = function getTopicCollection() {
-    return document.getElementById('js-topics');
+var getTagCollection = function getTagCollection() {
+    return document.getElementById('js-tags');
 };
 
-var getTopicInput = function getTopicInput() {
-    return document.getElementById('js-topic-dropdown').cloneNode(true);
+var getTagInput = function getTagInput() {
+    return document.getElementById('js-tag-dropdown').cloneNode(true);
 };
 
-var getTopicsSelected = function getTopicsSelected(topicCollection) {
-    return Array.from(topicCollection.children).map(function (element) {
+var getTagsSelected = function getTagsSelected(tagCollection) {
+    return Array.from(tagCollection.children).map(function (element) {
         return element.value;
     });
 };
 
 var createDeleteButton = function createDeleteButton() {
     var deleteButton = document.createElement("button");
-    deleteButton.className = "button button--delete topics__button";
+    deleteButton.className = "button button--delete tags__button";
     deleteButton.innerText = "Delete";
     deleteButton.id = "js-delete-tag";
     return deleteButton;
