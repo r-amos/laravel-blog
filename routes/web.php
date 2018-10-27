@@ -21,11 +21,13 @@ Route::post('/posts', 'PostsController@store');
 Route::get('/posts/create', 'PostsController@create');
 Route::get('/posts/{post}', 'PostsController@show');
 Route::get('/posts/{post}/edit', 'PostsController@edit');
-Route::put('/posts/{post}/update', 'PostsController@update');
+Route::put('/posts/{post}', 'PostsController@update');
 Route::delete('/posts/{post}', 'PostsController@destroy');
 
 Route::get('/tags', 'TagsController@index');
 Route::delete('tags/{tag}', 'TagsController@destroy');
+Route::get('tags/{tag}/edit', 'TagsController@edit');
+Route::put('/tags/{tag}', 'TagsController@update');
 Route::post('/tags', 'TagsController@store');
 Route::get('/posts/tags/{tag}', 'TagsController@index');
 

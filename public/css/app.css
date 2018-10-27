@@ -671,6 +671,7 @@ form * button {
   -ms-flex-item-align: center;
       align-self: center;
   border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
   border: none;
 }
 

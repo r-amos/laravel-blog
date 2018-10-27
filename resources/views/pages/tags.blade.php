@@ -23,7 +23,9 @@
                         @method('DELETE')
                         <input type="submit" class="button button--delete" value="Delete">
                     </form>
-                    <form>
+                    <form action="/tags/{{ $tag->name }}/edit" method="GET">
+                        @method('EDIT')
+                        @csrf
                         <input type="submit" class="button button--edit" value="Edit">
                     </form>
                 </div>

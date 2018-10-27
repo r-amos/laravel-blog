@@ -4,7 +4,7 @@
         <h1> Edit: {{ $post->title }} </h1>
     </div>
     <div class="post-content">    
-        <form method="POST" action="/posts/{{ $post->slug }}/update">
+        <form method="POST" action="/posts/{{ $post->slug }}">
             @method('PUT')
             @csrf
             <div>
