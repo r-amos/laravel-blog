@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 /**
@@ -19,6 +20,8 @@ class HomeController extends Controller
      */
     public function index(): \Illuminate\View\View
     {
-        return view('pages.home');
+        return view('pages.home', [
+            'posts' => Post::getLatestPosts(2)
+        ]);
     }
 }

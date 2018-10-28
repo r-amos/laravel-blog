@@ -587,6 +587,36 @@ form * button {
   margin-bottom: 3rem;
 }
 
+.index {
+  max-width: 590px;
+  margin: 0 auto;
+}
+
+.index__heading-container {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+}
+
+.index__heading-container h1 {
+  font-size: 6rem;
+  padding-bottom: 2rem;
+}
+
+.index p {
+  line-height: 3rem;
+}
+
+.index__name {
+  color: #444444;
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 0 1rem;
+}
+
+.index__posts h2 {
+  margin-bottom: 5rem;
+}
+
 .login-content {
   max-width: 590px;
   margin: 0 auto 3rem auto;

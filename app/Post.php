@@ -87,6 +87,14 @@ class Post extends Model
         }, $tags);
         $this->tags()->attach($tagIdentifiers);
     }
+
+    public static function getLatestPost() {
+        return self::all()->last();
+    }
+
+    public static function getLatestPosts($noOfPosts) {
+        return self::orderBy('created_at', 'desc')->take($noOfPosts)->get();
+    }
     
     /**
      * Return An Array Of Tag Ids From An Array Of Tag Names.

@@ -1,0 +1,26 @@
+.index {
+    max-width: $content-width;
+    margin: 0 auto;
+    &__heading-container {
+        h1 {
+            font-size: 6rem;
+            padding-bottom: 2rem;
+        }
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+    }
+    p {
+        line-height: 3rem;
+    }
+    &__name {
+        color: #444444;
+        font-weight: 700;
+        font-size: 4rem;
+        margin: 0 1rem;
+    }
+    &__posts {
+        h2 {
+            margin-bottom: 5rem;
+        }
+    }
+}
