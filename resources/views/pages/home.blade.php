@@ -1,4 +1,5 @@
 @extends('templates.layout')
+@section('title', 'About')
 @section('content')
     <div class="heading heading__container">
         <h1><span class="heading--break">Robert</span> Amos.</h1>

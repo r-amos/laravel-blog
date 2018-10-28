@@ -1,4 +1,5 @@
 @extends('templates.layout')
+@section('title', 'Create Post')
 @section('content')
 <div class="create">
     <div class="title">

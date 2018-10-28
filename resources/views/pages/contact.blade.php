@@ -1,4 +1,5 @@
 @extends('templates.layout')
+@section('title', 'Contact')
 @section('content')
     <div class="title">
         <h1>Contact.</h1>

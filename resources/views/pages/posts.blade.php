@@ -1,4 +1,5 @@
 @extends('templates.layout')
+@section('title', 'Ramblings')
 @section('content')
     <div class="title">
         <h1>{{ isset($tag) ? $tag : '' }} Ramblings.</h1>

@@ -1,4 +1,5 @@
 @extends('templates.layout')
+@section('title', 'Edit Post')
 @section('content')
     <div class="title">
         <h1> Edit: {{ $post->title }} </h1>

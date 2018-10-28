@@ -1,4 +1,5 @@
 @extends('templates.layout')
+@section('title', 'Edit Tag')
 @section('content')
 <div class="tag-content">
     <div class="title">
