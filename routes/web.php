@@ -31,5 +31,8 @@ Route::put('/tags/{tag}', 'TagsController@update');
 Route::post('/tags', 'TagsController@store');
 Route::get('/posts/tags/{tag}', 'TagsController@index');
 
-Auth::routes();
-Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
+//Disable User Registration & Password Reset
+Auth::routes([
+   'register' => false
+]);
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
