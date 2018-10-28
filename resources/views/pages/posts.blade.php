@@ -1,6 +1,7 @@
 @extends('templates.layout')
 @section('title', 'Ramblings')
 @section('description', 'The varied ramblings of Robert Amos, Web Developer based in the South West')
+@section('sidepanel', true)
 @section('content')
     <div class="title">
         <h1>{{ isset($tag) ? $tag : '' }} Ramblings.</h1>

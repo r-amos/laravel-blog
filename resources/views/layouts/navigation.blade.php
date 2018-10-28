@@ -1,6 +1,6 @@
 <nav class="main-navigation">
     <ul class="navigation navigation__container container">
-        <li class="navigation navigation__item nav-link"><a href="/">Ramblings.</a></li>
+        <li class="navigation navigation__item nav-link"><a href="/ramblings">Ramblings.</a></li>
         <li class="navigation navigation__item nav-link"><a href="/about">About</a></li>
         @if(Auth::user() !== null)
             <li class="navigation navigation__item nav-link navigation__item nav-link"><a href="/tags">Tags</a></li>
