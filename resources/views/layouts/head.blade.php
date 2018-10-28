@@ -7,7 +7,7 @@
     <title>Rob Amos | @yield('title', 'Web Developer')</title>
     <meta name="description" content="@yield('description','Personal site for Rob Amos, Web Developer based in the South West.')">
     <link rel="canonical" href="{{ @URL::current() }}">
-    <link rel="icon" type="image/png" href="{{ @URL::current() }}/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Asap:400,700" rel="stylesheet">
