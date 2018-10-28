@@ -19,7 +19,7 @@
                 <div class="sub-heading">
                     {{$post->formattedDate()}}
                 </div>
-                @include('components.tags')
+                @include('components.tags', ['tags' => $post->tags])
                 <p>{{ $post['description'] }}</p>
             </div>
         @endforeach

@@ -95,7 +95,7 @@ code {
 .title {
   text-align: justify;
   max-width: 590px;
-  margin: 0 auto 5rem auto;
+  margin: 0 auto 4rem auto;
 }
 
 .title h1 {
@@ -512,9 +512,16 @@ form * button {
   text-decoration: none;
 }
 
-.posts__post {
+.posts {
   max-width: 590px;
   margin: 0 auto;
+}
+
+.posts__tags {
+  margin-bottom: 5rem;
+}
+
+.posts__post {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);

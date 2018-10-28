@@ -8,15 +8,18 @@
         <div class="sub-heading">Collection of ramblings on topics of which I know little.</div>
        @include('components.create')
     </div>
+    <div class="posts posts__tags">
+        @include('components.tags', ['tags' => $tags])
+    </div>
     @foreach($posts as $post)
-            <div class="posts__post">
+            <div class="posts posts__post">
                 <h2>
                     <a class="posts__post-link" href="/posts/{{ urlencode($post['slug']) }}">{{ $post['title'] }}</a>
                 </h2>
                 <div class="sub-heading">
                     {{$post->formattedDate()}}
                 </div>
-                @include('components.tags')
+                @include('components.tags', ['tags' => $post['tags']])
                 <p>{{ $post['description'] }}</p>
                 @include('components.edit')
             </div>

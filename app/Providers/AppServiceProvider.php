@@ -17,8 +17,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         // Make Tags Available In Sidepanel
-        view()->composer('layouts.sidepanel', function($view) {
-            $view->with('tags', \App\Tag::all()->pluck(['name']));
+        view()->composer('pages.posts', function($view) {
+            $view->with('tags', \App\Tag::all());
         });
         // SVG Directive For Use In Blade Templates
         Blade::directive('svg', function ($svg) {

@@ -1,7 +1,10 @@
 .posts {
+    max-width: $content-width;
+    margin: 0 auto;
+    &__tags {
+        margin-bottom: 5rem;
+    }
     &__post {
-        max-width: $content-width;
-        margin: 0 auto;
         margin-bottom: 3rem;
         padding-bottom: 2rem;
         border-bottom: 1px solid $light-black;

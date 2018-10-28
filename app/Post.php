@@ -111,4 +111,5 @@ class Post extends Model
             }, $tags)
         );
     }
+    
 }

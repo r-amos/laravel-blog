@@ -8,13 +8,6 @@
                             @yield('content')
                         </main>
                     </div>
-                    @hasSection('sidepanel')
-                        <div class="col-1 layout layout__right">
-                            <aside>
-                                @include('layouts.sidepanel')
-                            </aside>
-                        </div>
-                    @endif
                 </div>
             </div>
             @include('layouts.footer')
