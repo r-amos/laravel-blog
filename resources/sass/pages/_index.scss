@@ -15,8 +15,11 @@
     &__name {
         color: #444444;
         font-weight: 700;
-        font-size: 4rem;
+        font-size: 3rem;
         margin: 0 1rem;
+        @include sm(){
+            font-size: 4rem;
+        }
     }
     &__posts {
         h2 {
