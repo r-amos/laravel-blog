@@ -1,6 +1,7 @@
 @extends('templates.layout')
 @section('title', 'Edit Post')
 @section('content')
+
     <div class="title">
         <h1> Edit: {{ $post->title }} </h1>
     </div>
@@ -35,15 +36,11 @@
             </div>
             <div>
                 <label for="description">Description:</label>
-                <textarea id="description" name="blog-description" type="text">
-                    {{ $post->description }}
-                </textarea>
+                <textarea id="description" name="blog-description" type="text">{{ $post->description }}</textarea>
             </div>
             <div>
                 <label for="content">Content:</label> 
-                <textarea id="content" name="blog-content" type="text">
-                    {{ $post->content }}
-                </textarea>
+                <textarea id="content" name="blog-content" type="text">{{ $post->content }}</textarea>
             </div>
             <div>
                 <button class="button button--update" type="submit">Update Post!</button>
