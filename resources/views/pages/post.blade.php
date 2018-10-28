@@ -1,5 +1,6 @@
 @extends('templates.layout')
 @section('title', $post->title)
+@section('description', $post->description)
 @section('content')
 <div class="post">
         <div class="title">
