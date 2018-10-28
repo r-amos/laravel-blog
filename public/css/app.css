@@ -39,7 +39,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #dfe4ea;
+  background-color: #EFEFEF;
 }
 
 /**
@@ -64,12 +64,12 @@ body {
   display: inline-block;
   border: none;
   cursor: pointer;
-  color: #dfe4ea;
+  color: #EFEFEF;
   padding: 0.5rem 2rem;
 }
 
 .button:visited {
-  color: #dfe4ea;
+  color: #EFEFEF;
 }
 
 .button--edit {
@@ -110,12 +110,15 @@ code {
 
 .tag {
   border-radius: 5px;
-  background-color: rgba(26, 188, 156, 0.8);
-  padding: 8px 12px;
+  background-color: #02C8A7;
+  padding: 8px 15px;
   font-size: 1.4rem;
   font-weight: 700;
   margin: 1rem 1rem 0rem 0rem;
-  color: rgba(223, 228, 234, 0.9) !important;
+  color: rgba(239, 239, 239, 0.9) !important;
+  text-shadow: 0.5px 0.5px 2px rgba(68, 68, 68, 0.8);
+  -webkit-box-shadow: 2px 2px 5px rgba(68, 68, 68, 0.25);
+          box-shadow: 2px 2px 5px rgba(68, 68, 68, 0.25);
 }
 
 .tag__container {
@@ -203,7 +206,7 @@ form * button {
   padding: 1rem 2.75rem;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #dfe4ea;
+  color: #EFEFEF;
   background-color: rgba(68, 68, 68, 0.9);
   border-radius: 4px;
   cursor: pointer;
@@ -280,16 +283,16 @@ form * button {
 .footer__link > svg {
   height: 2rem;
   margin-right: 1rem;
-  fill: #dfe4ea;
+  fill: #EFEFEF;
 }
 
 .footer__anchor {
-  color: rgba(223, 228, 234, 0.8);
+  color: rgba(239, 239, 239, 0.8);
   text-decoration: none;
 }
 
 .footer__anchor:visited {
-  color: rgba(223, 228, 234, 0.8);
+  color: rgba(239, 239, 239, 0.8);
 }
 
 .flex-container {
@@ -416,12 +419,12 @@ form * button {
 .header__title > a {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #dfe4ea;
+  color: #EFEFEF;
   text-decoration: none;
 }
 
 .header__title > a:visited {
-  color: #dfe4ea;
+  color: #EFEFEF;
 }
 
 .layout__right {
@@ -466,13 +469,13 @@ form * button {
 }
 
 .main-navigation .navigation__item > a {
-  color: #dfe4ea;
+  color: #EFEFEF;
   text-decoration: none;
 }
 
 .main-navigation .navigation__item > a:visited {
   text-decoration: none;
-  color: #dfe4ea;
+  color: #EFEFEF;
 }
 
 .main-navigation .navigation__item--logout a {
@@ -670,7 +673,7 @@ form * button {
 .tag__section-title:after {
   position: absolute;
   content: "";
-  background-color: rgba(102, 102, 102, 0.5);
+  background-color: rgba(68, 68, 68, 0.5);
   height: 3px;
   width: 30%;
   bottom: -1rem;
@@ -876,7 +879,7 @@ h5 {
 }
 
 p {
-  color: #666666;
+  color: rgba(68, 68, 68, 0.9);
   font-size: 1.6rem;
 }
 
