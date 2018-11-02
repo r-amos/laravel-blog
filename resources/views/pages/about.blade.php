@@ -1,6 +1,6 @@
 @extends('templates.layout')
 @section('title', 'About')
-@section('description', 'Hello, my name is Robert Amos and I am Web Developer based in the South West')
+@section('description', 'Hello, my name is Rob Amos and I am Web Developer based in the South West')
 @section('content')
     <div class="title">
         <h1>About Me.</h1>

@@ -1,6 +1,6 @@
 @extends('templates.layout')
 @section('title', 'Ramblings')
-@section('description', 'The varied ramblings of Robert Amos, Web Developer based in the South West')
+@section('description', 'The varied ramblings of Rob Amos, Web Developer based in the South West')
 @section('sidepanel', true)
 @section('content')
     <div class="title">
