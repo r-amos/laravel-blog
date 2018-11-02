@@ -622,13 +622,13 @@ form * button {
 .index__name {
   color: #444444;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 4.125rem;
   margin: 0 1rem;
 }
 
 @media (min-width: 576px) {
   .index__name {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 }
 
