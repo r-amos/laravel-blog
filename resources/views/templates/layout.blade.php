@@ -3,7 +3,7 @@
             <div class="container">
                 @include('layouts.header')
                 <div class="flex-container">
-                    <div class="col-12 layout layout__left">
+                    <div class="col-12 layout">
                         <main>
                             @yield('content')
                         </main>

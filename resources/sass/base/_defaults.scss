@@ -9,12 +9,15 @@ html {
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
   }
-  body {
+body {
     height: 100%;
     display: flex;
     flex-direction: column;
     background-color: $white;
   }
+main {
+  padding: 0 2.5rem;
+}
   /**
   * Inherit To Preserve Child Inheritance
   */

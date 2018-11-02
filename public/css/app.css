@@ -42,6 +42,10 @@ body {
   background-color: #EFEFEF;
 }
 
+main {
+  padding: 0 2.5rem;
+}
+
 /**
   * Inherit To Preserve Child Inheritance
   */
@@ -301,7 +305,6 @@ form * button {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 5rem;
 }
 
 @media (min-width: 576px) {

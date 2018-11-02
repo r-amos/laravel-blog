@@ -4,7 +4,7 @@
 @section('content')
 <div class="post">
         <div class="title">
-            <h1>{{$post->title}}</h2>
+            <h1>{{$post->title}}</h1>
             <div class="sub-heading">
                 {{$post->formattedDate()}}
             </div>
