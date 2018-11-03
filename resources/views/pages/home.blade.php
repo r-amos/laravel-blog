@@ -5,7 +5,7 @@
         <!--<h1><span class="heading--break">Robert</span> Amos.</h1>->
         <!--<h3>Dreamweaver. Visionary. Idiot.</h3>-->
         <p>
-            Hi, I'm <span class="index index__name">Rob Amos</span> a junior <strong>web developer</strong> based in the South West. 
+            Hi, I'm <span class="index index__name">Rob Amos</span> a junior <strong>web developer</strong> based in the <strong>South West.</strong> 
             I created this site to document anything that I learn, or find interesting.
         </p>
     </div>
